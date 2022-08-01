@@ -1,0 +1,4 @@
+/* section.usuario {} */
+section.usuario .elusuario > div > img {
+	border-radius: 50%;
+}

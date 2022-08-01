@@ -1,31 +1,39 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 
+import ArrowDown from '../assets/arrowdown.svg';
+
+import './Nav.css';
+
 function Nav () {
 	return (
 		<nav>
 			<ul>
 				<li>
-					<NavLink to="/">Inicio</NavLink>
+					<NavLink  activeClassName="selected" to="/">Inicio</NavLink>
 				</li>
 				<li>
-					<NavLink to="/map">Map</NavLink>
+					<NavLink  activeClassName="selected" to="/map">Map</NavLink>
 				</li>
 				<li>
-					Fetch
+					<NavLink  activeClassName="selected" to="/perritorandom">Perrito Random</NavLink>
 				</li>
 				<li>
-					<ul>
-						<li>
-							<NavLink to="/perritorandom">Perrito Random</NavLink>
-						</li>
-						<li>
-							<NavLink to="/universidades">Universidades</NavLink>
-						</li>
-					</ul>
+					Fetch <img src={ArrowDown} alt="Arrow Down" />
+						<ul>
+							{/* <li>
+								<NavLink  activeClassName="selected" to="/perritorandom">Perrito Random</NavLink>
+							</li> */}
+							<li>
+								<NavLink  activeClassName="selected" to="/universidades">Universidades</NavLink>
+							</li>
+							<li>
+								<NavLink  activeClassName="selected" to="/usuario">Usuario</NavLink>
+							</li>
+						</ul>
 				</li>
 				<li>
-					<NavLink to="/contacto">Contacto</NavLink>
+					<NavLink  activeClassName="selected" to="/contacto">Contacto</NavLink>
 				</li>
 			</ul>
 		</nav>

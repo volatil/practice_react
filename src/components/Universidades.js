@@ -18,10 +18,8 @@ function Universidades () {
 					"web" : x[ count ].web_pages ,
 					"dominio" : x[ count ].domains ,
 				}
-				console.log( `Web: ${uni.web}` );
 				todo.push({ "posicion" : count , "nombre" : uni.nombre , "web" : uni.web , "dominio" : uni.dominio });
 			};
-			console.log( todo );
 			setU_nombre( todo );
 		})
 	},[]);

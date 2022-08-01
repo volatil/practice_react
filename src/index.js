@@ -11,6 +11,7 @@ import Inicio from './components/Inicio';
 import Map from './components/Map';
 import PerritoRandom from './components/PerritoRandom';
 import Universidades from './components/Universidades';
+import Usuario from './components/Usuario';
 import Contacto from './components/Contacto';
 import Error from './components/Error';
 
@@ -29,6 +30,7 @@ root.render(
 				<Route path="/map" element={<Map />} />
 				<Route path="/perritorandom" element={<PerritoRandom />} />
 				<Route path="/universidades" element={<Universidades />} />
+				<Route path="/usuario" element={<Usuario />} />
 				<Route path="/contacto" element={<Contacto />} />
 				<Route path="*" element={<Error />} />
 			</Routes>

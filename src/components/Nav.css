@@ -1,0 +1,36 @@
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: whitesmoke;
+}
+nav ul {
+	display: flex;
+	margin: 0;
+	/* padding: 10px 0; */
+}
+nav ul li {
+	list-style: none;
+	position: relative;
+	/* margin: 0 10px; */
+}
+nav ul li a {
+	text-decoration: none;
+	heigth: 100%;
+}
+nav ul li img {
+	width: 10px;
+}
+nav ul li ul {
+	display: none;
+}
+nav ul li:hover ul {
+	display: block;
+	position: absolute;
+	padding: 10px 10px 10px 0;
+	min-width: 160px;
+	background: whitesmoke;
+}
+nav ul li:hover ul li {
+	margin: 0;;
+}
