@@ -1,15 +1,21 @@
 import React , {useEffect , useState} from 'react';
+import Loading from './Loading';
 
 function Universidades () {
 	
+	const [ loading , setLoading ] = useState( false );
 	const [ u_nombre , setU_nombre ] = useState();
 	
 	useEffect(() => {
+		
+		setLoading( true );
+		
 		const universidades = "http://universities.hipolabs.com/search?country=Chile";
 		fetch( universidades )
 		.then( x => x.json() )
 		.then(x => {
 			
+					
 			var todo = [];
 			
 			for ( var count = 0; count <= 63; count++ ) {
@@ -21,8 +27,13 @@ function Universidades () {
 				todo.push({ "posicion" : count , "nombre" : uni.nombre , "web" : uni.web , "dominio" : uni.dominio });
 			};
 			setU_nombre( todo );
+			setLoading( false );
 		})
 	},[]);
+	
+	if ( loading ) {
+		return <Loading />
+	};
 	
 	return ( 
 		<section className="lasuniversidades">

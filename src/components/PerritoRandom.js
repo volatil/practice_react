@@ -1,4 +1,5 @@
 import React , {useEffect , useState} from 'react';
+import Loading from './Loading';
 
 function FetchChow () {
 	
@@ -21,11 +22,10 @@ function FetchChow () {
 		
 	},[]);
 	
-	console.log( `Perrito Random .js` );
-	
 	if ( loading ) {
-		return <div className="loadinggggg"><img width="100" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif" alt="Loading ..." /></div>
+		return <Loading />
 	};
+	
 	return ( 
 		<section className="fetch">
 			<h2>Perrito Random</h2>

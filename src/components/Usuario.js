@@ -1,4 +1,6 @@
 import React , { useEffect , useState } from 'react';
+import Loading from './Loading';
+
 import './Usuario.css';
 
 // https://randomuser.me/api/
@@ -6,8 +8,12 @@ import './Usuario.css';
 function Usuario () {
 	
 	const [ usuario , setUsuario ] = useState();
+	const [ loading , setLoading ] = useState( false );
 	
 	useEffect(() => {
+		
+		setLoading( true );
+		
 		fetch( "https://randomuser.me/api/" )
 		.then( x => x.json() )
 		.then( x => {
@@ -67,9 +73,14 @@ function Usuario () {
 			}];
 			
 			setUsuario( getUsuario );
+			setLoading( false );
 			
 		});
 	},[]);
+	
+	if ( loading ) {
+		return <Loading />
+	};
 
 	return ( 
 		<section className="usuario">
