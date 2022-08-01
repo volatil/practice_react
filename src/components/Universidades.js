@@ -12,13 +12,16 @@ function Universidades () {
 			
 			var todo = [];
 			
-			for ( var count = 0; count <= 20; count++ ) {
+			for ( var count = 0; count <= 63; count++ ) {
 				var uni = {
 					"nombre" : x[ count ].name ,
+					"web" : x[ count ].web_pages ,
+					"dominio" : x[ count ].domains ,
 				}
-				console.log( `Nombre: ${uni.nombre}` );
-				todo.push({ "nombre" : uni.nombre })
+				console.log( `Web: ${uni.web}` );
+				todo.push({ "posicion" : count , "nombre" : uni.nombre , "web" : uni.web , "dominio" : uni.dominio });
 			};
+			console.log( todo );
 			setU_nombre( todo );
 		})
 	},[]);
@@ -29,7 +32,12 @@ function Universidades () {
 				{
 					u_nombre?.map(( uni ) => {
 						return(
-							<div className="universidad" key={ uni.nombre }>{ uni.nombre }</div>
+							<div className="universidad" key={ uni.nombre }>
+								<p>{ uni.nombre }</p>
+								<p>
+									<a target="_blank" href={ uni.web } rel="noreferrer">{ uni.dominio }</a>
+								</p>
+							</div>
 						)
 					})
 				}
