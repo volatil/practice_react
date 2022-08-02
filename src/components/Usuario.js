@@ -79,7 +79,12 @@ function Usuario () {
 	},[]);
 	
 	if ( loading ) {
-		return <Loading />
+		return (
+			<section className="usuario">
+				<h2>Usuario</h2>
+				<Loading />
+			</section>
+		);
 	};
 
 	return ( 

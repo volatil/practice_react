@@ -32,7 +32,12 @@ function Universidades () {
 	},[]);
 	
 	if ( loading ) {
-		return <Loading />
+		return (
+			<section className="lasuniversidades">
+				<h2>Universidades</h2>
+				<Loading />
+			</section>
+		);
 	};
 	
 	return ( 

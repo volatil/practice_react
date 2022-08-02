@@ -1,0 +1,24 @@
+section.libros > .libros {
+	display: flex;
+	flex-wrap: wrap;
+}
+section.libros > .libros .libro {
+	width: 31%;
+	border: 1px solid #eee;
+	margin: 0 1% 2%;
+}
+section.libros > .libros .libro .imagen {
+	display: flex;
+	justify-content: center;
+	min-height: 210px;
+	padding: 20px 0 10px;
+}
+section.libros > .libros .libro .imagen > img {
+	max-width: 80%;
+}
+section.libros > .libros .libro ul strong.nombre_libro {
+	font-size: 1.2em;
+	text-align: center;
+	display: block;
+	margin-bottom: 20px;
+}

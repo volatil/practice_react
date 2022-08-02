@@ -8,7 +8,7 @@ function Error () {
 	return ( 
 		<section className="error">
 			<h2>PAGINA NO ENCONTRADA</h2>
-			<p>No encontramos la pagina <code>{location.pathname}</code></p>
+			<p style={{ textAlign: 'center' }}>No encontramos la pagina: <code style={{ background: 'whitesmoke' , padding: '10px' , color: 'black' , fontWeight: 'bold' }}>{location.pathname}</code></p>
 		</section>
 	);
 }

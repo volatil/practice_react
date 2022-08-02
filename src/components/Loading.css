@@ -1,0 +1,8 @@
+section.loadinggggg {
+	display: flex;
+	justify-content: center;
+	padding-top: 120px;
+}
+section.loadinggggg > img {
+	width: 100px;
+}

@@ -23,7 +23,12 @@ function FetchChow () {
 	},[]);
 	
 	if ( loading ) {
-		return <Loading />
+		return (
+			<section className="fetch">
+				<h2>Perrito Random</h2>
+				<Loading />
+			</section>
+		);
 	};
 	
 	return ( 

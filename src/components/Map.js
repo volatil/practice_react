@@ -4,83 +4,83 @@ function Map () {
 	
 	const proveedores = [
 		{
-			"link" : "/planeta-202207-80_t.html" , 
 			"nombre" : "planeta" ,
+			"link" : "/planeta-202207-80_t.html" , 
 			"dcto" : 80 ,
 		},
 		{
-			"link" : "/cl-liberalia-2022-08_t.html?no-cache=1" , 
 			"nombre" : "liberalia" ,
+			"link" : "/cl-liberalia-2022-08_t.html?no-cache=1" , 
 			"dcto" : 60 ,
 		},
 		{
-			"link" : "/cl-timebooks-2022-08_t.html?no-cache=1" , 
 			"nombre" : "timebooks" ,
+			"link" : "/cl-timebooks-2022-08_t.html?no-cache=1" , 
 			"dcto" : 60 ,
 		},
 		{
-			"link" : "/cl-prh-obs-202206_t.html?no-cache=1" , 
 			"nombre" : "penguin" ,
+			"link" : "/cl-prh-obs-202206_t.html?no-cache=1" , 
 			"dcto" : 80 ,
 		},
 		{
-			"link" : "/cl-tajamar-2022-07_t.html?no-cache=1" , 
 			"nombre" : "tajamar" ,
+			"link" : "/cl-tajamar-2022-07_t.html?no-cache=1" , 
 			"dcto" : 45 ,
 		},
 		{
-			"link" : "/cl-bigsur-2207_t.html?no-cache=1" , 
 			"nombre" : "bigsur" ,
+			"link" : "/cl-bigsur-2207_t.html?no-cache=1" , 
 			"dcto" : 30 ,
 		},
 		{
-			"link" : "/cl-metales-pesados_t.html" , 
 			"nombre" : "metales pesados" ,
+			"link" : "/cl-metales-pesados_t.html" , 
 			"dcto" : 25 ,
 		},
 		{
-			"link" : "/cl-ril_t.html" , 
 			"nombre" : "ril" ,
+			"link" : "/cl-ril_t.html" , 
 			"dcto" : 30 ,
 		},
 		{
-			"link" : "/cl-ocho-libros_t.html" , 
 			"nombre" : "ocho libros" ,
+			"link" : "/cl-ocho-libros_t.html" , 
 			"dcto" : 25 ,
 		},
 		{
-			"link" : "/cl-libros-del-amanecer_t.html" , 
 			"nombre" : "libros del amanecer" ,
+			"link" : "/cl-libros-del-amanecer_t.html" , 
 			"dcto" : 25 ,
 		},
 		{
-			"link" : "/cl-zigzag-2022-08_t.html?no-cache=1" , 
 			"nombre" : "zigzag" ,
+			"link" : "/cl-zigzag-2022-08_t.html?no-cache=1" , 
 			"dcto" : 30 ,
 		},
 		{
-			"link" : "/retailexpress-cl-2208_t.html?no-cache=1" , 
 			"nombre" : "retail express" ,
+			"link" : "/retailexpress-cl-2208_t.html?no-cache=1" , 
 			"dcto" : 45 ,
 		},
 		{
-			"link" : "/cl-catalonia-2208_t.html?no-cache=1" , 
 			"nombre" : "catalonia" ,
+			"link" : "/cl-catalonia-2208_t.html?no-cache=1" , 
 			"dcto" : 30 ,
 		},
 		{
-			"link" : "/cl-urano-2022-08_t.html?no-cache=1" , 
 			"nombre" : "ediciones urano" ,
+			"link" : "/cl-urano-2022-08_t.html?no-cache=1" , 
 			"dcto" : 25 ,
 		},
 		{
-			"link" : "/cl-trayecto_t.html" , 
 			"nombre" : "trayecto" ,
+			"link" : "/cl-trayecto_t.html" , 
 			"dcto" : 30 ,
 		},
 		{
-			"link" : "/cl-editorialuniv-2208_t.html?no-cache=1" , 
 			"nombre" : "universitaria" ,
+			"link" : "/cl-editorialuniv-2208_t.html?no-cache=1" , 
 			"dcto" : 45 ,
 		},
 	];

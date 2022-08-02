@@ -11,30 +11,39 @@ function Nav () {
 		<nav>
 			<ul>
 				<li>
-					<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/">Inicio</NavLink>
+					<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/">Inicio</NavLink>
 				</li>
 				<li>
-					<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/map">Map</NavLink>
+					<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/map">Map</NavLink>
 				</li>
 				<li>
-					<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/perritorandom">Perrito Random</NavLink>
+					<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/libro">Libro</NavLink>
 				</li>
 				<li>
-					Fetch <img src={ArrowDown} alt="Arrow Down" />
+					<a href="#fetch">Fetch <img src={ArrowDown} alt="Arrow Down" /></a>
 						<ul>
-							{/* <li>
-								<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/perritorandom">Perrito Random</NavLink>
-							</li> */}
 							<li>
-								<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/universidades">Universidades</NavLink>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/perritorandom">Perrito Random</NavLink>
 							</li>
 							<li>
-								<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/usuario">Usuario</NavLink>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/universidades">Universidades</NavLink>
+							</li>
+							<li>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/usuario">Usuario</NavLink>
+							</li>
+							<li>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/zoo">Zoo</NavLink>
+							</li>
+							<li>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/colorrandom">Color Random</NavLink>
+							</li>
+							<li>
+								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/url">Url</NavLink>
 							</li>
 						</ul>
 				</li>
 				<li>
-					<NavLink  className={({isActive}) => (isActive ? "active-style" : 'none')} to="/contacto">Contacto</NavLink>
+					<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/contacto">Contacto</NavLink>
 				</li>
 			</ul>
 		</nav>
