@@ -22,3 +22,20 @@ section.libros > .libros .libro ul strong.nombre_libro {
 	display: block;
 	margin-bottom: 20px;
 }
+section.libros > .libros .libro a.comprar {
+	list-style: none;
+	text-align: center;
+	padding: 10px 0;
+	width: 90%;
+	background: #ef9;
+	display: block;
+	margin: 0 auto 10px;
+	color: black;
+	text-decoration: none;
+	border: 1px solid #cae338;
+	text-transform: uppercase;
+	border-radius: 20px;
+}
+section.libros > .libros .libro a.comprar:hover {
+	background: #cae338;
+}

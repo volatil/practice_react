@@ -87,7 +87,7 @@ function Map () {
 
 	return (
 		<section className="map">
-			<h2>MAP</h2>
+			<h2>MAP BASICO</h2>
 			<ul>
 				{
 					proveedores.map((prov) => {

@@ -14,7 +14,6 @@ function Universidades () {
 		fetch( universidades )
 		.then( x => x.json() )
 		.then(x => {
-			
 					
 			var todo = [];
 			
@@ -26,6 +25,7 @@ function Universidades () {
 				}
 				todo.push({ "posicion" : count , "nombre" : uni.nombre , "web" : uni.web , "dominio" : uni.dominio });
 			};
+			console.log( "hola" );
 			setU_nombre( todo );
 			setLoading( false );
 		})

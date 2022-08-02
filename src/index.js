@@ -20,6 +20,9 @@ import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import Error from './components/Error';
 
+import LibroDetalle from './components/LibroDetalle';
+import BuscadorLibros from './components/BuscadorLibros';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.Fragment>
@@ -33,8 +36,9 @@ root.render(
 			<Routes>
 				<Route exact path="/" element={<Inicio />} />
 				<Route path="/map" element={<Map />} />
-				<Route path="/libro" element={<Libro />} />
+				<Route exact path="/libro/" element={<BuscadorLibros />} />
 				<Route path="/libro/:book" element={<Libro />} />
+				<Route path="/detalle/:elid" element={<LibroDetalle />} />
 				<Route path="/perritorandom" element={<PerritoRandom />} />
 				<Route path="/universidades" element={<Universidades />} />
 				<Route path="/zoo" element={<Zoo />} />

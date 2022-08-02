@@ -1,24 +1,22 @@
 import React , { useEffect , useState } from "react";
 import Loading from './Loading';
-import { useLocation } from "react-router-dom";
+import { NavLink , useLocation } from "react-router-dom";
+
+import BuscadorLibros from './BuscadorLibros';
 
 import './Libros.css';
 
-function Libros ( { book } ) {
+function Libros () {
 
 	const [ loading , setLoading ] = useState( false );
+	const [ buscador , setBuscador ] = useState( false );
 	const [ elLibro , setElLibro ] = useState([]);
 	
 	var location = useLocation();
-	book = location.pathname.split( "/libro/" )[1];
-	if ( book === undefined ) {
-		book = "baldor";
-	}
+	// var book = location.pathname.split( "/libro/" )[1];
+	var book = "";
 	
-	useEffect(() => {
-		
-		setLoading( true );
-	
+	function service_GetDataLibro (book) {
 		const api = `https://www.googleapis.com/books/v1/volumes?q=${ book }`;
 		
 		fetch( api )
@@ -49,19 +47,34 @@ function Libros ( { book } ) {
 					"venta" : {
 						"precio" : resumen.saleInfo.listPrice === undefined ? "" : <li>Precio: $ {resumen.saleInfo.listPrice.amount} {resumen.saleInfo.listPrice.currencyCode}</li> ,
 						"peso" : resumen.saleInfo.listPrice === undefined ? "" : resumen.saleInfo.listPrice.currencyCode ,
-						"comprar" : resumen.saleInfo.buyLink === undefined ? "" : <li><a target="_blank" rel="noreferrer" href={ resumen.saleInfo.buyLink }>Comprar ePub</a></li> ,
-						
+						"comprar" : resumen.saleInfo.buyLink === undefined ? "" : <a className="comprar" target="_blank" rel="noreferrer" href={ resumen.saleInfo.buyLink }>Comprar ePub</a> ,
 					} ,
 				});
-
+				
 			};
 			
 			setElLibro( todo );
 			setLoading( false );
 
 		});
+	};
+	
+	useEffect(() => {
+
+		setLoading( true );
 		
-	},[book]);
+		var book = location.pathname.split( "/libro/" )[1];
+		console.log( `Book => "${ book }"` );
+		if ( book === undefined || book.length <= 0 ) {
+			console.log( `indefinido` );
+			setLoading( false );
+			setBuscador( true )
+		} else {
+			console.log( `definido !! :D` );
+			service_GetDataLibro( book )
+		};
+		
+	},[]);
 	
 	if ( loading ) {
 		return (
@@ -71,6 +84,15 @@ function Libros ( { book } ) {
 			</section>
 		);
 	};
+	
+	if ( buscador ) {
+		return (
+			<section className="libros">
+				<h2>Libros</h2>
+				<BuscadorLibros />
+			</section>
+		);
+	}
 
 	return (
 		<section className="libros">
@@ -79,7 +101,8 @@ function Libros ( { book } ) {
 				{
 					elLibro.map( ( librito ) => {
 						return (
-								<div className="libro" key={ librito.id }>
+							<div className="libro" key={ librito.id }>
+									<NavLink to={ "/detalle/" + librito.id }>VISITAR DETALLE</NavLink>
 									<div className="imagen">
 										<img src={ librito.imagen } alt={ librito.nombre } />
 									</div>
@@ -97,8 +120,8 @@ function Libros ( { book } ) {
 											<a target="_blank" rel="noreferrer" href={ librito.preview }>Preview</a>
 										</li>
 										{ librito.venta.precio }
-										{ librito.venta.comprar }
 									</ul>
+									{ librito.venta.comprar }
 									{/* <p>{ librito.descripcion }</p> */}
 								</div>
 						);
