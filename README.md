@@ -1,5 +1,10 @@
 Solo practica
+=============
 
+PENDIENTE:
+
+*   Buscar de libros
+*   Trabajarlo con BD
 <!-- 
 http://universities.hipolabs.com/search?country=Chile
 https://randomuser.me/api/
