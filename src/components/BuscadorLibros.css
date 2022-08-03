@@ -1,0 +1,44 @@
+section.BuscadorLibros {}
+section.BuscadorLibros > div {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.BuscadorLibros > div > div {
+	position: relative;
+	margin-bottom: 10px;
+}
+section.BuscadorLibros > div > div > label {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background: white;
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+section.BuscadorLibros > div > div > input {
+    width: 300px;
+    height: 40px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+}
+section.BuscadorLibros > div > button {
+	width: 320px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	list-style: none;
+	text-align: center;
+	background: #ef9;
+	display: block;
+	color: black;
+	text-decoration: none;
+	border: 1px solid #cae338;
+	text-transform: uppercase;
+	border-radius: 20px;
+}
+section.BuscadorLibros > div > button:hover {
+	background: #cae338;
+}

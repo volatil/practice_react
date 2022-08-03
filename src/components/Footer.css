@@ -1,11 +1,7 @@
 footer {
 	background: whitesmoke;
+	margin-top: 200px;
 }
-/* footer.fix {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-} */
 footer > p {
 	padding: 10px 0;
 	font-size: .8em;
