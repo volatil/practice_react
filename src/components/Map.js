@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Map.css';
+
 function Map () {
 	
 	const proveedores = [
@@ -92,7 +94,12 @@ function Map () {
 				{
 					proveedores.map((prov) => {
 						return ( 
-							<li key={ prov.link }>{ prov.nombre }</li> 
+							<li key={ prov.link }>
+								<a href={`#${ prov.link }`}>
+									<span className="nombre">{ prov.nombre }</span>
+									<span className="dcto">{ prov.dcto }<span>%</span></span>
+								</a>
+							</li> 
 						);
 					})
 				}
