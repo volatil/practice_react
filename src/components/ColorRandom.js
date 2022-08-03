@@ -19,7 +19,7 @@ function ColorRandom () {
 	return (
 		<section className="test">
 			<h2>Color Random</h2>
-			<div className="hola" style={{ background: elcolor , width: '100%' , height: '550px' , margin: '0 auto' }}></div>
+			<div style={{ background: elcolor , width: '100%' , height: '550px' , margin: '0 auto' }}></div>
 		</section>
 	);
 };
