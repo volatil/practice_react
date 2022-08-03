@@ -3,6 +3,7 @@ Solo practica
 
 PENDIENTE:
 
+*   Darkmode
 *   Buscar de libros
 *   Trabajarlo con BD
 <!-- 
