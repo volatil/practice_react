@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './BuscadorLibros.css';
+
 function BuscadorLibros () {
 	
 	function buscar () {
@@ -10,8 +12,13 @@ function BuscadorLibros () {
 	return (
 		<section className="BuscadorLibros">
 			<h2>Buscador Libros</h2>
-			<input className="input_buscar" type="text" placeholder="Buscar Libro" />
-			<button onClick={buscar}>Buscar</button>
+			<div>
+				<div>
+					<label>Buscar Libro</label>
+					<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
+				</div>
+				<button onClick={buscar}>Buscar</button>
+			</div>
 		</section>
 	);
 };
