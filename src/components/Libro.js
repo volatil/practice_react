@@ -30,7 +30,6 @@ function Libros () {
 				var resumen = libro.items[ count ];
 				
 				todo.push({ 
-					"cantidad_resultados" : "holaaa" ,
 					"autor" : resumen.volumeInfo.authors , 
 					"descripcion" : resumen.volumeInfo.description , 
 					"id" : resumen.id , 
@@ -64,17 +63,14 @@ function Libros () {
 		setLoading( true );
 		
 		var book = location.pathname.split( "/libro/" )[1];
-		console.log( `Book => "${ book }"` );
 		if ( book === undefined || book.length <= 0 ) {
-			console.log( `indefinido` );
 			setLoading( false );
 			setBuscador( true )
 		} else {
-			console.log( `definido !! :D` );
 			service_GetDataLibro( book )
 		};
 		
-	},[]);
+	},[location]);
 	
 	if ( loading ) {
 		return (
