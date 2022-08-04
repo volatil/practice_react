@@ -30,24 +30,26 @@ function Libros () {
 				
 				var resumen = libro.items[ count ];
 				
-				var fixTodo = {// eslint-disable-next-line
-					"precio2" : function(){
+				var fixTodo = {
+					"autor" : resumen.volumeInfo.authors ,// eslint-disable-next-line
+					// "precio2" : function(){
 
-						// var fixPrecio = "";
-						if ( libro.items[ count ].saleInfo.listPrice ) {
-							console.log( `07` );
-							var fixPrecio = `<p>Precio: $ ${ libro.items[ count ].saleInfo.listPrice.amount } ${ resumen.saleInfo.listPrice.currencyCode }</p>`;
-						} else {
-							fixPrecio = "";
-						};
+					// 	// var fixPrecio = "";
+					// 	if ( libro.items[ count ].saleInfo.listPrice ) {
+					// 		console.log( `07` );
+					// 		var fixPrecio = `<p>Precio: $ ${ libro.items[ count ].saleInfo.listPrice.amount } ${ resumen.saleInfo.listPrice.currencyCode }</p>`;
+					// 	} else {
+					// 		fixPrecio = "";
+					// 	};
 
-						return fixPrecio;
+					// 	return fixPrecio;
 						
-					} ,
+					// } ,
+					"isPrecioExiste" : resumen.saleInfo.listPrice ,
 				};
 				
 				todo.push({ 
-					"autor" : resumen.volumeInfo.authors , 
+					"autor" : fixTodo.autor , 
 					"descripcion" : resumen.volumeInfo.description , 
 					"id" : resumen.id , 
 					"imagen" : resumen.volumeInfo?.imageLinks ? resumen.volumeInfo.imageLinks.thumbnail : "https://ouch-cdn2.icons8.com/DP-WOV6CKiyzfKpw4jgLyhW1t0lCk3ca-WuruEH9ZHY/rs:fit:455:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMjU1/LzM3OGRkMjBjLWQ5/OGMtNGE3ZS1hYTQx/LWY3NDg0NjQwYzk2/Mi5zdmc.png" , 
@@ -59,12 +61,13 @@ function Libros () {
 					"paginas" : resumen.volumeInfo.pageCount ,
 					"idioma" : resumen.volumeInfo.language ,
 					"preview" : resumen.volumeInfo.previewLink ,
+					"isPrecioExiste" : fixTodo.isPrecioExiste ,
 					"venta" : {
 						"precio" : resumen.saleInfo.listPrice === undefined ? "" : resumen.saleInfo.listPrice.amount ,
 						"peso" : resumen.saleInfo.listPrice === undefined ? "" : resumen.saleInfo.listPrice.currencyCode ,
 						"comprar" : resumen.saleInfo.buyLink === undefined ? "" : <Button ancho="100%" texto="Comprar ePub" /> ,
 					} ,
-					"precio2" : fixTodo.precio2() ,
+					// "precio2" : fixTodo.precio2() ,
 				});
 				
 			};
@@ -130,7 +133,9 @@ function Libros () {
 										{/* <p>
 											<a target="_blank" rel="noreferrer" href={ librito.preview }>Preview</a>
 										</p> */}
-										{ librito.precio2 }
+										{
+											librito.isPrecioExiste ? <p> $ { librito.venta.precio } { librito.venta.peso }</p> : ""
+										}
 										{ librito.venta.comprar }
 										{/* <p>{ librito.descripcion }</p> */}
 									</NavLink>

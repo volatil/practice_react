@@ -3,7 +3,7 @@ section.libros > .libros {
 	flex-wrap: wrap;
 }
 section.libros > .libros .libro {
-	width: 29%;
+	width: 20.7%;
 	border: 1px solid #eee;
 	margin: 0 1% 2%;
 	padding: 1%;
