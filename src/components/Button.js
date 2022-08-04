@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Button.css';
 
-function Button() {
+function Button( props ) {
 	
 	function buscar () {
 		var vamosabuscar = document.querySelector( ".input_buscar" ).value;
@@ -10,8 +10,8 @@ function Button() {
 	}
 	
 	return ( 
-		<button onClick={ buscar }>
-			<span></span><p>Buscar</p>
+		<button style={{ width: props.ancho }} onClick={ buscar }>
+			<span></span><p>{ props.texto }</p>
 		</button> 
 	);
 };
