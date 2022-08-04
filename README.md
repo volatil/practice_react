@@ -3,6 +3,7 @@ Solo practica
 
 PENDIENTE:
 
+*   Ordenar estructura de carpetas
 *   Darkmode
 *   Buscar de libros
 *   Trabajarlo con BD
