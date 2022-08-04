@@ -1,4 +1,5 @@
 import React from 'react';
+import HelmetResumen from './HelmetResumen';
 
 import './Map.css';
 
@@ -89,6 +90,7 @@ function Map () {
 
 	return (
 		<section className="map">
+			<HelmetResumen title="Test de map()" />
 			<h2>MAP BASICO</h2>
 			<ul>
 				{

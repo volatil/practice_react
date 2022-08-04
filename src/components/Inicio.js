@@ -1,4 +1,5 @@
 import React from 'react';
+import HelmetResumen from './HelmetResumen';
 
 function Inicio () {
 
@@ -7,6 +8,7 @@ function Inicio () {
 
 	return (
 		<section className="inicio">
+			<HelmetResumen title="... Esto lo hago para divertirme" />
 			<h2>INICIO</h2>
 			<img style={{display: 'block' , margin: '0 auto' }} src={ imagen } alt="Inicio" />
 		</section>

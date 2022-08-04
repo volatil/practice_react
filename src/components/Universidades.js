@@ -1,4 +1,5 @@
 import React , {useEffect , useState} from 'react';
+import HelmetResumen from './HelmetResumen';
 import Loading from './Loading';
 
 function Universidades () {
@@ -41,6 +42,7 @@ function Universidades () {
 	
 	return ( 
 		<section className="lasuniversidades">
+			<HelmetResumen title="Universidades" />
 			<h2>Universidades</h2>
 				{
 					u_nombre?.map(( uni ) => {

@@ -1,4 +1,5 @@
 import React , { useState , useEffect } from 'react';
+import HelmetResumen from './HelmetResumen';
 import Loading from './Loading';
 
 import './Zoo.css';
@@ -59,6 +60,7 @@ function Zoo () {
 	if ( loading ) {
 		return (
 			<section className="zoo">
+				<HelmetResumen title="Cargando Animalitos ..." />
 				<h2>Zoo</h2>
 				<Loading />
 			</section>
@@ -67,6 +69,7 @@ function Zoo () {
 	
 	return (
 		<section className="zoo">
+			<HelmetResumen title="Animalitos" />
 			<h2>Zoo</h2>
 			<div className="animales">
 				{

@@ -14,7 +14,6 @@ import PerritoRandom from './components/PerritoRandom';
 import Universidades from './components/Universidades';
 import Zoo from './components/Zoo';
 import ColorRandom from './components/ColorRandom';
-import Url from './components/Url';
 import Usuario from './components/Usuario';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
@@ -43,7 +42,6 @@ root.render(
 				<Route path="/universidades" element={<Universidades />} />
 				<Route path="/zoo" element={<Zoo />} />
 				<Route path="/colorrandom" element={<ColorRandom />} />
-				<Route path="/url" element={<Url />} />
 				<Route path="/usuario" element={<Usuario />} />
 				<Route path="/contacto" element={<Contacto />} />
 				<Route path="*" element={<Error />} />

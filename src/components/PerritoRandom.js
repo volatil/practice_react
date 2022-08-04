@@ -1,5 +1,8 @@
 import React , {useEffect , useState} from 'react';
+import HelmetResumen from './HelmetResumen';
 import Loading from './Loading';
+
+import './PerritoRandom.css';
 
 function FetchChow () {
 	
@@ -7,6 +10,7 @@ function FetchChow () {
 
 	const [ loading , setLoading ] = useState( false );
 	const [ imagen , setImagen ] = useState(traeImagen);
+	const [ raza , setRaza ] = useState();
 	
 	useEffect(() => {
 	
@@ -15,16 +19,24 @@ function FetchChow () {
 		fetch( traeImagen )
 		.then( x => x.json() )
 		.then(x => {
+		
 			var perrito = x.message;
+			var raza    = perrito.split( "/breeds/" )[1];
+			raza = raza.split( "/" )[0];
+			raza = raza.replaceAll( "-" , " " );
+			
 			setImagen(perrito);
+			setRaza( raza );
 			setLoading( false );
-		})
+
+		});
 		
 	},[]);
 	
 	if ( loading ) {
 		return (
-			<section className="fetch">
+			<section className="perritoRandom">
+				<HelmetResumen title="Cargando Perrito ..." />
 				<h2>Perrito Random</h2>
 				<Loading />
 			</section>
@@ -32,9 +44,13 @@ function FetchChow () {
 	};
 	
 	return ( 
-		<section className="fetch">
+		<section className="perritoRandom">
+			<HelmetResumen title={ `Perrito Raza: ${ raza }` } />
 			<h2>Perrito Random</h2>
-			<img width="500" src={imagen} alt="GUAU!" />
+			<div>
+				<img src={imagen} alt="GUAU!" />
+				<p>{raza}</p>
+			</div>
 		</section>
 	)
 	

@@ -37,9 +37,6 @@ function Nav () {
 							<li>
 								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/colorrandom">Color Random</NavLink>
 							</li>
-							<li>
-								<NavLink  className={({isActive}) => (isActive ? "tamoactivo" : 'none')} to="/url">Url</NavLink>
-							</li>
 						</ul>
 				</li>
 				<li>

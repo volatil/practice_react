@@ -4,7 +4,7 @@ section.libros > .libros {
 }
 section.libros > .libros .libro {
 	width: 20.7%;
-	border: 1px solid #eee;
+	border: 1px solid #ddd;
 	margin: 0 1% 2%;
 	padding: 1%;
 }
@@ -29,12 +29,17 @@ section.libros > .libros .libro > a p {
 	text-align: center;
 }
 section.libros > .libros .libro > a strong.nombre_libro {
-	font-size: 1.6em;
-	text-transform: uppercase;
+	height: 52px;
+	font-size: 1.2em;
 	text-align: center;
-	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
-section.libros > .libros .libro > a button {
-	margin-top: 20px;
+section.libros > .libros .libro > a p.precio {
+	color: #b10000;
+	margin-top: 10px;
 }

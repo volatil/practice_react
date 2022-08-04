@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from "react-router-dom";
+import HelmetResumen from './HelmetResumen';
 
 function Error () {
 
@@ -7,6 +8,7 @@ function Error () {
 
 	return ( 
 		<section className="error">
+			<HelmetResumen title="Pagina no encontrada" />
 			<h2>PAGINA NO ENCONTRADA</h2>
 			<p style={{ textAlign: 'center' }}>No encontramos la pagina: <code style={{ background: 'whitesmoke' , padding: '10px' , color: 'black' , fontWeight: 'bold' }}>{location.pathname}</code></p>
 		</section>

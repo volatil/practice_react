@@ -10,7 +10,7 @@ function Button( props ) {
 	}
 	
 	return ( 
-		<button style={{ width: props.ancho }} onClick={ buscar }>
+		<button onClick={ props.onclick }>
 			<span></span><p>{ props.texto }</p>
 		</button> 
 	);

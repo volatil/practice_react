@@ -1,4 +1,5 @@
 import React , { useEffect , useState } from 'react';
+import HelmetResumen from './HelmetResumen';
 import Loading from './Loading';
 
 import './Usuario.css';
@@ -7,8 +8,9 @@ import './Usuario.css';
 
 function Usuario () {
 	
-	const [ usuario , setUsuario ] = useState();
 	const [ loading , setLoading ] = useState( false );
+	const [ usuario , setUsuario ] = useState();
+	const [ fijatitle , setFijatitle ] = useState();
 	
 	useEffect(() => {
 		
@@ -71,8 +73,9 @@ function Usuario () {
 				"imagen_large"  : x.results[ 0 ].picture.large ,
 				"nat" : x.results[ 0 ].nat ,
 			}];
-			
+
 			setUsuario( getUsuario );
+			setFijatitle( getUsuario[ 0 ].nombre.title + " " + getUsuario[ 0 ].nombre.nombre + " " + getUsuario[ 0 ].nombre.apellido );
 			setLoading( false );
 			
 		});
@@ -81,6 +84,7 @@ function Usuario () {
 	if ( loading ) {
 		return (
 			<section className="usuario">
+				<HelmetResumen title="Cargando Usuario ..." />
 				<h2>Usuario</h2>
 				<Loading />
 			</section>
@@ -89,6 +93,7 @@ function Usuario () {
 
 	return ( 
 		<section className="usuario">
+			<HelmetResumen title={`Usuario: ${fijatitle}`} />
 			<h2>Usuario</h2>
 			<div className="elusuario">
 				{

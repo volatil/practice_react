@@ -1,4 +1,5 @@
 import React from 'react';
+import HelmetResumen from './HelmetResumen';
 
 function Contacto () {
 
@@ -6,6 +7,7 @@ function Contacto () {
 
 	return (
 		<section className="contacto">
+			<HelmetResumen title="Contactito" />
 			<h2>CONTACTO</h2>
 			<img style={{display: 'block' , margin: '0 auto' }} src={ imagen } alt="Contacto" />
 		</section>
