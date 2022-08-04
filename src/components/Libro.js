@@ -3,6 +3,7 @@ import Loading from './Loading';
 import { NavLink , useLocation } from "react-router-dom";
 
 import BuscadorLibros from './BuscadorLibros';
+import Button from './Button';
 
 import './Libros.css';
 
@@ -29,25 +30,41 @@ function Libros () {
 				
 				var resumen = libro.items[ count ];
 				
+				var fixTodo = {// eslint-disable-next-line
+					"precio2" : function(){
+
+						// var fixPrecio = "";
+						if ( libro.items[ count ].saleInfo.listPrice ) {
+							console.log( `07` );
+							var fixPrecio = `<p>Precio: $ ${ libro.items[ count ].saleInfo.listPrice.amount } ${ resumen.saleInfo.listPrice.currencyCode }</p>`;
+						} else {
+							fixPrecio = "";
+						};
+
+						return fixPrecio;
+						
+					} ,
+				};
+				
 				todo.push({ 
 					"autor" : resumen.volumeInfo.authors , 
 					"descripcion" : resumen.volumeInfo.description , 
 					"id" : resumen.id , 
 					"imagen" : resumen.volumeInfo?.imageLinks ? resumen.volumeInfo.imageLinks.thumbnail : "https://ouch-cdn2.icons8.com/DP-WOV6CKiyzfKpw4jgLyhW1t0lCk3ca-WuruEH9ZHY/rs:fit:455:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMjU1/LzM3OGRkMjBjLWQ5/OGMtNGE3ZS1hYTQx/LWY3NDg0NjQwYzk2/Mi5zdmc.png" , 
 					"nombre" : resumen.volumeInfo.title , 
-					"editorial" : resumen.volumeInfo.publisher === undefined ? "" : <li>Editorial: { resumen.volumeInfo.publisher }</li> ,
-					"categoria" : resumen.volumeInfo.categories === undefined ? "" : <li>Categoria: { resumen.volumeInfo.categories }</li> ,
+					"editorial" : resumen.volumeInfo.publisher === undefined ? "" : <p>Editorial: { resumen.volumeInfo.publisher }</p> ,
+					"categoria" : resumen.volumeInfo.categories === undefined ? "" : <p>Categoria: { resumen.volumeInfo.categories }</p> ,
 					"publicado" : resumen.volumeInfo.publishedDate ,
 					"identificador" : resumen.volumeInfo.industryIdentifiers === undefined ? "?" : resumen.volumeInfo.industryIdentifiers[ 0 ].identifier ,
-					// "isbn_13" : resumen.volumeInfo.industryIdentifiers[1] === undefined ? "?" : resumen.volumeInfo.industryIdentifiers[ 1 ].identifier ,
 					"paginas" : resumen.volumeInfo.pageCount ,
 					"idioma" : resumen.volumeInfo.language ,
 					"preview" : resumen.volumeInfo.previewLink ,
 					"venta" : {
-						"precio" : resumen.saleInfo.listPrice === undefined ? "" : <li>Precio: $ {resumen.saleInfo.listPrice.amount} {resumen.saleInfo.listPrice.currencyCode}</li> ,
+						"precio" : resumen.saleInfo.listPrice === undefined ? "" : resumen.saleInfo.listPrice.amount ,
 						"peso" : resumen.saleInfo.listPrice === undefined ? "" : resumen.saleInfo.listPrice.currencyCode ,
-						"comprar" : resumen.saleInfo.buyLink === undefined ? "" : <a className="comprar" target="_blank" rel="noreferrer" href={ resumen.saleInfo.buyLink }>Comprar ePub</a> ,
+						"comprar" : resumen.saleInfo.buyLink === undefined ? "" : <Button ancho="100%" texto="Comprar ePub" /> ,
 					} ,
+					"precio2" : fixTodo.precio2() ,
 				});
 				
 			};
@@ -98,27 +115,25 @@ function Libros () {
 					elLibro.map( ( librito ) => {
 						return (
 							<div className="libro" key={ librito.id }>
-									<NavLink to={ "/detalle/" + librito.id }>VISITAR DETALLE</NavLink>
-									<div className="imagen">
-										<img src={ librito.imagen } alt={ librito.nombre } />
-									</div>
-									<ul>
+									<NavLink to={ "/detalle/" + librito.id }>
+										<div className="imagen">
+											<img src={ librito.imagen } alt={ librito.nombre } />
+										</div>
 										<strong className="nombre_libro">{ librito.nombre }</strong>
-										<li>Autor: { librito.autor }</li>
+										<p>Autor: { librito.autor }</p>
 										{ librito.editorial }
-										<li>Publicado: { librito.publicado }</li>
+										<p>Publicado: { librito.publicado }</p>
 										{ librito.categoria }
-										<li>Identificador: { librito.identificador }</li>
-										{/* <li>ISBN 13: { librito.isbn_13 }</li> */}
-										<li>Paginas: { librito.paginas }</li>
-										<li>Idioma: { librito.idioma }</li>
-										<li>
+										<p>Identificador: { librito.identificador }</p>
+										<p>Paginas: { librito.paginas }</p>
+										<p>Idioma: { librito.idioma }</p>
+										{/* <p>
 											<a target="_blank" rel="noreferrer" href={ librito.preview }>Preview</a>
-										</li>
-										{ librito.venta.precio }
-									</ul>
-									{ librito.venta.comprar }
-									{/* <p>{ librito.descripcion }</p> */}
+										</p> */}
+										{ librito.precio2 }
+										{ librito.venta.comprar }
+										{/* <p>{ librito.descripcion }</p> */}
+									</NavLink>
 								</div>
 						);
 					})

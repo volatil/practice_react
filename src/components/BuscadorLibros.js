@@ -13,7 +13,7 @@ function BuscadorLibros () {
 					<label>Buscar Libro</label>
 					<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
 				</div>
-				<Button />
+				<Button ancho="320px" texto="BUSCAR" />
 			</div>
 		</section>
 	);
