@@ -3,6 +3,7 @@ Solo practica
 
 PENDIENTE:
 
+*   Button Component con clase por default
 *   Ordenar estructura de carpetas
 *   Darkmode
 *   Buscar de libros
