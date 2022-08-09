@@ -1,0 +1,65 @@
+section#feriados .feriados {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+#buscador {
+  margin-bottom: 50px;
+}
+section#feriados .feriados .feriado {
+  width: 22%;
+  margin: 0 1% 3%;
+  position: relative;
+}
+section#feriados .feriados .feriado ul {
+  margin: 0 0 10px 0;
+  padding-left: 20px;
+}
+section#feriados .feriados .feriado ul li {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+section#feriados .feriados .feriado h4 {
+  text-transform: capitalize;
+}
+section#feriados .feriados .feriado p {
+  margin: 0;
+}
+section#feriados .feriados .feriado p.descripcion {
+  margin: 10px 0;
+  overflow: hidden;
+  margin-bottom: 80px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+section#feriados .feriados .feriado button {
+  background: #19a1c5;
+  color: white;
+  border: 1px solid #09667e;
+  padding: 10px 5px;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 50px;
+}
+section#feriados .feriados .feriado button a {
+  color: white;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media (max-width: 550px) {
+  section#feriados .feriados .feriado {
+    width: 35%;
+    margin: 0 7% 7%;
+    min-height: 430px;
+  }
+}

@@ -1,0 +1,13 @@
+section#darkmode > div {
+  cursor: pointer;
+  position: absolute;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 10px 0 0 10px;
+}
+section#darkmode > div.black {
+  background: #444;
+}
+section#darkmode > div > img {
+  width: 60px;
+}

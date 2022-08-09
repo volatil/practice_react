@@ -1,0 +1,81 @@
+section#todaslascrypto {
+}
+section#todaslascrypto h2 {
+  margin-bottom: 40px;
+}
+section#todaslascrypto .cryptos {
+  display: flex;
+  flex-wrap: wrap;
+}
+section#todaslascrypto .cryptos .crypto {
+  width: 23%;
+  margin: 0 1% 2%;
+  border: 1px solid #047e9e3b;
+  border-radius: 3px;
+  position: relative;
+}
+section#todaslascrypto .cryptos .crypto:hover {
+	opacity: .7;
+}
+section#todaslascrypto .cryptos .crypto > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 40px;
+}
+section#todaslascrypto .cryptos .crypto a > img {
+  max-width: 64px;
+  margin-top: 20px;
+}
+section#todaslascrypto .cryptos .crypto a > button {
+  position: absolute;
+  width: 50%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  display: none;
+  /*
+  */
+}
+section#todaslascrypto .cryptos .crypto a:hover > button {
+  display: flex;
+}
+
+@media (max-width: 750px) {
+  section#todaslascrypto .cryptos {
+    width: 90%;
+    margin: 0 auto;
+  }
+  section#todaslascrypto .cryptos .crypto {
+    width: 46%;
+    margin: 0 2% 3%;
+  }
+}
+
+@media (max-width: 450px) {
+  section#todaslascrypto .cryptos .crypto {
+    position: relative;
+    width: 100%;
+  }
+  section#todaslascrypto .cryptos .crypto a > * {
+    position: absolute;
+  }
+  section#todaslascrypto .cryptos .crypto a > img {
+    position: static;
+    float: left;
+    margin-bottom: 10px;
+  }
+  section#todaslascrypto .cryptos .crypto a > h4 {
+    text-align: left;
+    margin-left: 80px;
+    font-size: 1.4em;
+    margin-top: 20px;
+  }
+  section#todaslascrypto .cryptos .crypto a > p {
+    margin-top: 45px;
+    margin-left: 80px;
+  }
+}

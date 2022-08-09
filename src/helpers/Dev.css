@@ -1,0 +1,12 @@
+#dev {
+  position: fixed;
+  top: 0;
+  background: cyan;
+  cursor: pointer;
+}
+#dev > p {
+  margin: 0;
+  padding: 5px 10px;
+}
+#dev > p > span {
+}

@@ -1,7 +1,11 @@
 :root {
-	--movimiento: all .1s ease-in;
-	--boton_color_base: #0699c0;
-	--boton_color_hover: #047e9e;
+	--movimiento: all 0.1s ease-in;
+	--boton_default_color_base: #0699c0;
+	--boton_default_color_hover: #047e9e;
+	--boton_warning_color_base: #ffab00;
+	--boton_warning_color_hover: #e59a02;
+	--boton_danger_color_base: #de350b;
+	--boton_danger_color_hover: #bf2600;
 }
 button {
 	min-width: 160px;
@@ -11,28 +15,55 @@ button {
 	cursor: pointer;
 	list-style: none;
 	text-align: center;
-	background: var( --boton_color_base );
 	color: black;
 	text-decoration: none;
-	border: 1px solid var( --boton_color_hover );
 	border-radius: 4px;
 	position: relative;
 	display: flex;
-    align-items: center;
-    overflow: hidden;
-	transition: var( --movimiento );
+	align-items: center;
+	overflow: hidden !important;
+	transition: var(--movimiento);
+}
+button.primary {
+	background: var(--boton_default_color_base);
+	border: 1px solid var(--boton_default_color_hover);
+}
+	button.primary:hover {
+		background: var(--boton_default_color_hover);
+	}
+button.primary > span {
+	background: var(--boton_default_color_hover);
+}
+button.warning {
+	background: var(--boton_warning_color_base);
+	border: 1px solid var(--boton_warning_color_hover);
+}
+	button.warning:hover {
+		background: var(--boton_warning_color_hover);
+	}
+button.warning > span {
+	background: var(--boton_warning_color_hover);
+}
+button.danger {
+	background: var(--boton_danger_color_base);
+	border: 1px solid var(--boton_danger_color_hover);
+}
+	button.danger:hover {
+		background: var(--boton_danger_color_hover);
+	}
+button.danger > span {
+	background: var(--boton_danger_color_hover);
 }
 button > span {
 	--medida: 100%;
-	width: var( --medida );
+	width: var(--medida);
 	position: absolute;
-	left: calc( var( --medida ) * -1 );
+	left: calc(var(--medida) * -1);
 	top: 0;
-	background: var( --boton_color_hover );
 	height: 40px;
 	display: block;
 	z-index: 0;
-	transition: var( --movimiento );
+	transition: var(--movimiento);
 }
 button > p {
 	position: absolute;

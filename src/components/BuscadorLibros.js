@@ -6,6 +6,8 @@ import HelmetResumen from './HelmetResumen';
 
 function BuscadorLibros () {
 
+	var buscar = "";
+	
 	return (
 		<section className="BuscadorLibros">
 			<HelmetResumen title="Buscador por Libro" />
@@ -15,7 +17,7 @@ function BuscadorLibros () {
 					<label>Buscar Libro</label>
 					<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
 				</div>
-				<Button ancho="320px" texto="BUSCAR" />
+				<Button onclick={buscar} texto="BUSCAR" />
 			</div>
 		</section>
 	);

@@ -1,0 +1,11 @@
+footer {
+	background: whitesmoke;
+	margin-top: 200px;
+}
+footer > p {
+	padding: 10px 0;
+	font-size: 0.8em;
+	letter-spacing: 0.08em;
+	text-align: center;
+	margin: 0;
+}

@@ -1,61 +1,59 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router , Routes , Route } from "react-router-dom";
 
-import './index.css';
+import { Fragment } from "react";
+// import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Inicio from './components/Inicio';
-import Map from './components/Map';
-import Libro from './components/Libro';
-import PerritoRandom from './components/PerritoRandom';
-import Universidades from './components/Universidades';
-import Zoo from './components/Zoo';
-import ColorRandom from './components/ColorRandom';
-import Usuario from './components/Usuario';
-import Contacto from './components/Contacto';
-import Footer from './components/Footer';
-import Error from './components/Error';
+import Inicio from "./pages/Inicio";
+import Nav from "./components/Nav";
+import RickAndMorty from "./pages/RickAndMorty";
+import TodoEn90Dias from "./pages/TodoEn90Dias";
+import Feriados from "./pages/Feriados";
+import Crypto from "./pages/Crypto";
+import CryptoDetalle from "./pages/CryptoDetalle";
+import Color from "./pages/Color";
+import Usuario from "./pages/Usuario";
+import Universidades from "./pages/Universidades";
+import PerritoRandom from "./pages/PerritoRandom";
+import Zoo from "./pages/Zoo";
+import Contacto from "./pages/Contacto";
+import Error from "./pages/Error";
 
-import LibroDetalle from './components/LibroDetalle';
-import BuscadorLibros from './components/BuscadorLibros';
+// COMPONENTS
+import Darkmode from "./components/darkmode/Darkmode";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// CSS
+import "./styles.css";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <React.Fragment>
-  
-	<Router>
-		
-		<Header />
-		<Nav />
-		
-		<div className="contenido">
+	<Fragment>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<Darkmode />
+		<Router>
+			<Header />
+			<Nav />
 			<Routes>
-				<Route exact path="/" element={<Inicio />} />
-				<Route path="/map" element={<Map />} />
-				<Route exact path="/libro/" element={<BuscadorLibros />} />
-				<Route path="/libro/:book" element={<Libro />} />
-				<Route path="/detalle/:elid" element={<LibroDetalle />} />
-				<Route path="/perritorandom" element={<PerritoRandom />} />
-				<Route path="/universidades" element={<Universidades />} />
-				<Route path="/zoo" element={<Zoo />} />
-				<Route path="/colorrandom" element={<ColorRandom />} />
+				<Route path="/" element={<Inicio />} />
+				<Route path="/rickandmorty" element={<RickAndMorty />} />
+				<Route path="/todoen90dias" element={<TodoEn90Dias />} />
+				<Route path="/feriados" element={<Feriados />} />
+				<Route path="/crypto" element={<Crypto />} />
+				<Route path="/crypto/:id" element={<CryptoDetalle />} />
+				<Route path="/color" element={<Color />} />
 				<Route path="/usuario" element={<Usuario />} />
+				<Route path="/universidades" element={<Universidades />} />
+				<Route path="/perritorandom" element={<PerritoRandom />} />
+				<Route path="/zoo" element={<Zoo />} />
 				<Route path="/contacto" element={<Contacto />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
-		</div>
-		
-		<Footer />
-		
-	</Router>
-
-  </React.Fragment>
+			
+			<Footer />
+		</Router>
+	</Fragment>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
