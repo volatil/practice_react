@@ -8,3 +8,6 @@ section#personajes > .personajes > .personaje {
 	width: 18%;
 	margin: 0 1% 2%;
 }
+section#personajes > .personajes > .personaje > a > img {
+	width: 100%;
+}

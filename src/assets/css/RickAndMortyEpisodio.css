@@ -1,0 +1,9 @@
+section#RickAndMortyEpisodio > button {
+	margin: 40px auto 0;
+}
+section#RickAndMortyEpisodio > .detalles > .detalle {
+	margin-top: 40px;
+}
+section#RickAndMortyEpisodio > .detalles > .detalle > p {
+	margin: 0;
+}

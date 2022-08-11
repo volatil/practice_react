@@ -1,0 +1,31 @@
+section#RickAndMortyDetalle > button {
+	margin: 40px auto 0;
+}
+section#RickAndMortyDetalle > .detalles > .detalle {
+	margin-top: 40px;
+}
+section#RickAndMortyDetalle > .detalles > .detalle > p {
+	margin: 0;
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div {
+	display: flex;
+	width: 40%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div > strong {
+	margin-right: 10px;
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div > a:before {
+	content: " , ";
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div > a:first-of-type:before {
+	content: "";
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div > a:last-of-type:before {
+	content: "\00a0y ";
+}
+section#RickAndMortyDetalle > .detalles > .detalle > div > a.es1:last-of-type:before {
+	content: "";
+}

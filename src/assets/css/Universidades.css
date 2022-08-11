@@ -1,0 +1,17 @@
+section#lasuniversidades {}
+section#lasuniversidades > .buscador {
+	width: 200px;
+	margin: 0 auto 60px;
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+section#lasuniversidades > .buscador > input {
+	border: 1px solid black;
+	height: 45px;
+	padding: 5px 10px;
+	width: 100%;
+}
+section#lasuniversidades > .buscador > button {
+	width: 100%;
+	margin-top: 10px;
+}

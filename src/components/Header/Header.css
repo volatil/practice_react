@@ -52,3 +52,16 @@ header a h1 p span:hover {
     background-position: left;
   }
 }
+
+@media ( max-width: 650px ) {
+	header a h1 {
+		padding: 20px 0;
+	}
+	header a h1 img {
+		display: none;
+	}
+	header a h1 p {
+		font-size: 0.7em;
+		margin: 0;
+	}
+}

@@ -26,7 +26,7 @@ function Nav() {
       <ul>
         <Li nombre="Inicio" link="/" />
         <li>
-          Fetch <img src={ArrowDown} alt="Arrow Down" />
+          Fetch <img className="arrowDown" src={ArrowDown} alt="Arrow Down" />
           <ul>
             <Li nombre="Rick and Morty" link="/rickandmorty" />
             <Li nombre="Todo en 90 Dias" link="/todoen90dias" />

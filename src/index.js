@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import Nav from "./components/Nav";
 import RickAndMorty from "./pages/RickAndMorty";
+import RickAndMortyDetalle from "./pages/RickAndMortyDetalle";
+import RickAndMortyEpisodio from "./pages/RickAndMortyEpisodio";
 import TodoEn90Dias from "./pages/TodoEn90Dias";
 import Feriados from "./pages/Feriados";
 import Crypto from "./pages/Crypto";
@@ -40,6 +42,8 @@ root.render(
 			<Routes>
 				<Route path="/" element={<Inicio />} />
 				<Route path="/rickandmorty" element={<RickAndMorty />} />
+				<Route path="/rickandmorty/personaje/:id" element={<RickAndMortyDetalle />} />
+				<Route path="/rickandmorty/episodio/:id" element={<RickAndMortyEpisodio />} />
 				<Route path="/todoen90dias" element={<TodoEn90Dias />} />
 				<Route path="/feriados" element={<Feriados />} />
 				<Route path="/crypto" element={<Crypto />} />

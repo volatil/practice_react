@@ -102,7 +102,7 @@ function CryptoDetalle() {
 	
 	return (
 		<section id="cryptodetalle">
-			<HelmetResumen title={`Crypto ${cryptoState?.map((asdasdasd) => {return asdasdasd.nombre})}`} />
+			<HelmetResumen title={`Crypto / ${cryptoState?.map((asdasdasd) => {return asdasdasd.nombre})}`} />
 			{cryptoState?.map((cryp) => {
 				return (
 					<div className="detalle" key={cryp.ranking}>

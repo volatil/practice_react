@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import HelmetResumen from "../components/Helmet/HelmetResumen";
+import { Link } from "react-router-dom";
 import Loading from "../components/Loading/Loading";
 
 // CSS
 import "../assets/css/RickAndMorty.css";
 
 function RickAndMorty() {
+
 	const [ loading , setLoading ] = useState( false );
 	const [todosLosPersonajes, setTodosLosPersonajes] = useState();
 
@@ -32,7 +34,7 @@ function RickAndMorty() {
         setTodosLosPersonajes(todo);
 	});
 	setLoading( false );
-  }, [todosLosPersonajes]);
+  }, [setTodosLosPersonajes]);
 
 	if ( loading ) {
 		return (
@@ -52,8 +54,10 @@ function RickAndMorty() {
 					{todosLosPersonajes?.map((prs) => {
 						return (
 							<div className="personaje" key={prs.id}>
-								<img src={prs.imagen} alt={prs.nombre} />
-								<p>{prs.nombre}</p>
+								<Link to={`/rickandmorty/personaje/${prs.id}`}>
+									<img src={prs.imagen} alt={prs.nombre} />
+									<p>{prs.nombre}</p>
+								</Link>
 							</div>
 						);
 					})}
