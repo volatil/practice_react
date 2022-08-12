@@ -4,12 +4,11 @@ import $ from "jquery";
 
 function Props() {
 	
-	const [cambioTexto, setCambioTexto] = useState("GG");
+	const [cambioTexto, setCambioTexto] = useState();
 	
 	function pulsar() {
 		var algo = $( "input" ).val()
 		setCambioTexto( algo )
-		console.log( `Me has pulsado ${algo}.` );
 	}
 
 	function Componentito( props ) {
@@ -30,10 +29,9 @@ function Props() {
 			</style>
 			<h1>ComponenTEST</h1>
 			<div style={{ display: "flex" , justifyContent: "center" , flexDirection: "column" , alignItems: "center" , width: "250px" , margin: "0 auto 40px" }}>
-				<input onKeyUp={pulsar} style={{ width: "100%" , height: "45px" , padding: "6px" , marginBottom: "10px" }} />
+				<input onChange={pulsar} style={{ width: "100%" , height: "45px" , padding: "6px" , marginBottom: "10px" }} />
 				<Button laclase="warning" texto="Cambiar Texto" />
 			</div>
-			<Button laclase="warning" texto={cambioTexto} />
 			<Componentito texto={cambioTexto} />
 		</section>
 		</>
