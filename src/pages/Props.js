@@ -25,8 +25,17 @@ function Props() {
 				.green {
 					color: green
 				}
+				
 			`}
 			</style>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+	
+			<br></br>
 			<h1>ComponenTEST</h1>
 			<div style={{ display: "flex" , justifyContent: "center" , flexDirection: "column" , alignItems: "center" , width: "250px" , margin: "0 auto 40px" }}>
 				<input onChange={pulsar} style={{ width: "100%" , height: "45px" , padding: "6px" , marginBottom: "10px" }} />
