@@ -8,11 +8,10 @@ import ArrowDown from "../assets/imagenes/arrowdown.svg";
 import "./Nav.css";
 
 function Nav() {
-	function Li({ link, nombre , icono }) {
+	function Li({ link, nombre }) {
 		return (
 			<li>
 				<NavLink className={({ isActive }) => (isActive ? "tamoactivo" : "none")} to={link} end >
-					<span className="material-symbols-outlined">{icono}</span>
 					{nombre}
 				</NavLink>
 			</li>
@@ -21,15 +20,17 @@ function Nav() {
 	return (
 		<nav>
 			<ul>
-				<Li nombre="Inicio" link="/" icono="home" />
+				<Li nombre="Inicio" link="/" />
 				<li>
-					ComponenTEST <img className="arrowDown" src={ArrowDown} alt="Arrow Down" />
+					ComponenTEST 
+					<span className="material-symbols-outlined">keyboard_arrow_down</span>
 					<ul>
-						<Li nombre="Props" link="/props" icono="attachment" />
+						<Li nombre="Props" link="/props" />
 					</ul>
 				</li>
 				<li>
-					Fetch <img className="arrowDown" src={ArrowDown} alt="Arrow Down" />
+					Fetch 
+					<span className="material-symbols-outlined">keyboard_arrow_down</span>
 					<ul>
 						<Li nombre="Rick and Morty" link="/rickandmorty" />
 						<Li nombre="Todo en 90 Dias" link="/todoen90dias" />
@@ -42,7 +43,7 @@ function Nav() {
 						<Li nombre="Zoo" link="/zoo" />
 					</ul>
 				</li>
-				<Li nombre="Contacto" link="/contacto" icono="perm_contact_calendar" />
+				<Li nombre="Contacto" link="/contacto" />
 			</ul>
 		</nav>
 	);
