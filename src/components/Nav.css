@@ -25,6 +25,7 @@ nav ul li {
 	justify-content: space-around;
 	align-items: center;
 	text-transform: uppercase;
+	cursor: context-menu;
 }
 nav ul li a:hover {
 	text-decoration: none;

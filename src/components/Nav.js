@@ -1,9 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-// IMAGENES
-import ArrowDown from "../assets/imagenes/arrowdown.svg";
-
 // CSS
 import "./Nav.css";
 
