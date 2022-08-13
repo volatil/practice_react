@@ -4,11 +4,11 @@ Solo practica
 PENDIENTE:
 
 *   Enlazar libros.js
-*   Button Component con clase por default
-*   Ordenar estructura de carpetas
-*   Darkmode
 *   Buscar de libros
+*   Darkmode
+*   Ordenar estructura de carpetas
 *   Trabajarlo con BD
+*   Button Component con clase por default ✅
 <!-- 
 http://universities.hipolabs.com/search?country=Chile
 https://randomuser.me/api/

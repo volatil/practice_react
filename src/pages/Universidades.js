@@ -20,7 +20,7 @@ function Universidades () {
 		traePaises( buscando , setUniversidades )
 		setTimeout(() => {
 			setLoading( false );
-		}, 5000);
+		}, 2000);
 	};
 	
 	function Universidades( props ) {
@@ -29,8 +29,11 @@ function Universidades () {
 				{
 					universidades?.map((uni) => {
 						return(
-							<div key={uni.name}>
-								<h1>{uni.name}</h1>
+							<div className="universidad" key={uni.name}>
+								<a href={uni.web_pages[0]} target="_blank" rel="noreferrer">
+									<h2>{uni.name}</h2>
+									<Button laclase="primary" texto="Visitar" />
+								</a>
 							</div>
 						)
 					})
@@ -44,6 +47,10 @@ function Universidades () {
 			<div className="buscador">
 				<input className="buscaPais" type="text" list="alphas" placeholder="Ingresa Pais" />
 				<datalist id="alphas">
+					<option value="chile" />
+					<option value="mexico" />
+					<option value="bolivia" />
+					<option value="spain" />
 					<option value="peru" />
 					<option value="argentina" />
 				</datalist>

@@ -6,6 +6,8 @@
 	--boton_warning_color_hover: #e59a02;
 	--boton_danger_color_base: #de350b;
 	--boton_danger_color_hover: #bf2600;
+	--boton_disabled_color_base: #f5f5f5;
+	--boton_disabled_color_hover: #d9d9d9;
 }
 button {
 	min-width: 160px;
@@ -24,6 +26,7 @@ button {
 	overflow: hidden !important;
 	transition: var(--movimiento);
 }
+
 button.primary {
 	background: var(--boton_default_color_base);
 	border: 1px solid var(--boton_default_color_hover);
@@ -34,6 +37,7 @@ button.primary {
 button.primary > span {
 	background: var(--boton_default_color_hover);
 }
+
 button.warning {
 	background: var(--boton_warning_color_base);
 	border: 1px solid var(--boton_warning_color_hover);
@@ -44,6 +48,7 @@ button.warning {
 button.warning > span {
 	background: var(--boton_warning_color_hover);
 }
+
 button.danger {
 	background: var(--boton_danger_color_base);
 	border: 1px solid var(--boton_danger_color_hover);
@@ -54,6 +59,19 @@ button.danger {
 button.danger > span {
 	background: var(--boton_danger_color_hover);
 }
+
+button.disabled {
+	cursor: not-allowed;
+	background: var(--boton_disabled_color_base);
+	border: 1px solid var(--boton_disabled_color_hover);
+}
+button.disabled > span {
+	display: none;
+}
+button.disabled > p {
+	color: #00000040;
+}
+
 button > span {
 	--medida: 100%;
 	width: var(--medida);
