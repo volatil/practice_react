@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 
-import isoHeader from "../../assets/imagenes/isoHeader.png"
+import isoHeader from "assets/imagenes/isoHeader.png"
 
 function Header() {
 

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 
 // COMPONENTS
-import Button from "../components/Button";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
+import Button from "components/Button";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
 // CSS
-import "../assets/css/Feriados.css";
+import "assets/css/Feriados.css";
 
 // https://date.nager.at/
 // https://date.nager.at/api/v3/PublicHolidays/2017/AT

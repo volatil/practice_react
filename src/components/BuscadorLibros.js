@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './Button';
+import Button from 'Button';
 
 import './BuscadorLibros.css';
-import HelmetResumen from './HelmetResumen';
+import HelmetResumen from 'HelmetResumen';
 
 function BuscadorLibros () {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
 function Inicio() {
 	// var imagen = "https://ouch-cdn2.icons8.com/9NZ040oJ2EFjkNQlksgUP2U0eBA1o-6Hd7lP4JI4HSU/rs:fit:608:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvOTIy/LzEwYTcyNjI1LWRm/ODMtNDk5Mi04YTdh/LTgzY2U4MGY3Nzcz/Yi5zdmc.png";

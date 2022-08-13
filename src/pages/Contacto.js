@@ -1,7 +1,7 @@
 import React from "react";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
-import imgContacto from "../assets/imagenes/contacto.png"
+import imgContacto from "assets/imagenes/contacto.png"
 
 function Contacto() {
 

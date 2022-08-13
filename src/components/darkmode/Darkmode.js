@@ -5,7 +5,7 @@ import $ from "jquery";
 import "./Darkmode.css";
 
 // IMAGENES
-import isoTipo from "../../assets/imagenes/darkmodeisotipo.svg"
+import isoTipo from "assets/imagenes/darkmodeisotipo.svg"
 
 function Darkmode() {
   {

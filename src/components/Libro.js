@@ -1,10 +1,10 @@
 import React , { useEffect , useState } from "react";
 import { NavLink , useLocation } from "react-router-dom";
-import HelmetResumen from "./HelmetResumen";
+import HelmetResumen from "HelmetResumen";
 
-import BuscadorLibros from './BuscadorLibros';
-import Loading from './Loading';
-import Button from './Button';
+import BuscadorLibros from 'BuscadorLibros';
+import Loading from 'Loading';
+import Button from 'Button';
 
 import './Libros.css';
 

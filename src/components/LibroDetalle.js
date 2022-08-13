@@ -1,9 +1,9 @@
 import React, { useEffect , useState } from "react";
 import { useLocation , useNavigate } from "react-router-dom";
 
-import HelmetResumen from "./HelmetResumen";
-import Loading from './Loading';
-import Button from "./Button";
+import HelmetResumen from "HelmetResumen";
+import Loading from 'Loading';
+import Button from "Button";
 
 function LibroDetalle () {
 	

@@ -3,6 +3,7 @@ Solo practica
 
 PENDIENTE:
 
+*   Enlazar libros.js
 *   Button Component con clase por default
 *   Ordenar estructura de carpetas
 *   Darkmode

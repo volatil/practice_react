@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import "../assets/css/TodoEn90Dias.css";
+import "assets/css/TodoEn90Dias.css";
 
-import HelmetResumen from "../components/Helmet/HelmetResumen";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
 function TodoEn90Dias() {
   const [shows, setShows] = useState();

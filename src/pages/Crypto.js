@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 //import $ from "jquery";
 
 // COMPONENTS
-import HelmetResumen from "../components/Helmet/HelmetResumen";
-import Loading from "../components/Loading/Loading";
-//import Button from "../components/Button";
+import HelmetResumen from "components/Helmet/HelmetResumen";
+import Loading from "components/Loading/Loading";
 
 // CSS
-import "../assets/css/Crypto.css";
+import "assets/css/Crypto.css";
 
 // DOCUMENTACION
 // https://docs.coincap.io/

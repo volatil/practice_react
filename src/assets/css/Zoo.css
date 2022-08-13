@@ -16,10 +16,11 @@ section.zoo > div.animales > .animal > .imagen {
 	align-content: center;
 	justify-content: center;
 	align-items: center;
-	min-height: 140px;
+	min-height: 290px;
 }
 section.zoo > div.animales > .animal > .imagen > img {
-	width: 100px;
+	max-height: 340px;
+	max-width: 100%;
 }
 section.zoo > div.animales > .animal > .nombre {
 	font-size: 1.2em;
@@ -29,7 +30,6 @@ section.zoo > div.animales > .animal > .nombre > span {
 	font-size: .6em;
 	font-weight: normal;
 }
-section.zoo > div.animales > .animal > ul {}
 section.zoo > div.animales > .animal > ul > li {
 	font-size: .9em;
 	list-style: none;

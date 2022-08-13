@@ -1,8 +1,8 @@
 import React , { useState , useEffect } from 'react';
-import HelmetResumen from '../components/Helmet/HelmetResumen';
-import Loading from '../components/Loading/Loading';
+import HelmetResumen from 'components/Helmet/HelmetResumen';
+import Loading from 'components/Loading/Loading';
 
-import '../assets/css/Zoo.css';
+import 'assets/css/Zoo.css';
 
 function Zoo () {
 	
@@ -81,10 +81,10 @@ function Zoo () {
 								</div>
 								<p className="nombre">{ ani.nombre }<br/><span>({ ani.latin })</span></p>
 								<ul>
-									<li><strong>Longitud Maxima:</strong> { ani.longitud_maxima }</li>
-									<li><strong>Longitud Minima:</strong> { ani.longitud_minima }</li>
-									<li><strong>Peso Maximo:</strong> { ani.weight_max }</li>
-									<li><strong>Peso Minimo:</strong> { ani.weight_min }</li>
+									<li><strong>Longitud Maxima:</strong> { ani.longitud_maxima } ft.</li>
+									<li><strong>Longitud Minima:</strong> { ani.longitud_minima } ft.</li>
+									<li><strong>Peso Maximo:</strong> { ani.weight_max } lb.</li>
+									<li><strong>Peso Minimo:</strong> { ani.weight_min } lb.</li>
 									<li><strong>Esperanza de Vida:</strong> { ani.esperanza }</li>
 									<li><strong>Habitat:</strong> { ani.habitat }</li>
 									<li><strong>Alimentacion:</strong> { ani.alimento }</li>

@@ -2,12 +2,12 @@ import React, { useState , useEffect } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 
 // COMPONENTS
-import Button from "../components/Button";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
-import Loading from "../components/Loading/Loading";
+import Button from "components/Button";
+import HelmetResumen from "components/Helmet/HelmetResumen";
+import Loading from "components/Loading/Loading";
 
 // CSS
-import "../assets/css/RickAndMortyEpisodio.css";
+import "assets/css/RickAndMortyEpisodio.css";
 
 function RickAndMortyDetalle() {
 

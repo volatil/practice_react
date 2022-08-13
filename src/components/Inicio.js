@@ -1,5 +1,5 @@
 import React from 'react';
-import HelmetResumen from './HelmetResumen';
+import HelmetResumen from 'HelmetResumen';
 
 function Inicio () {
 

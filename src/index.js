@@ -4,31 +4,31 @@ import { Fragment } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Inicio from "./pages/Inicio";
-import Nav from "./components/Nav";
-import Props from "./pages/Props";
-import RickAndMorty from "./pages/RickAndMorty";
-import RickAndMortyDetalle from "./pages/RickAndMortyDetalle";
-import RickAndMortyEpisodio from "./pages/RickAndMortyEpisodio";
-import TodoEn90Dias from "./pages/TodoEn90Dias";
-import Feriados from "./pages/Feriados";
-import Crypto from "./pages/Crypto";
-import CryptoDetalle from "./pages/CryptoDetalle";
-import Color from "./pages/Color";
-import Usuario from "./pages/Usuario";
-import Universidades from "./pages/Universidades";
-import PerritoRandom from "./pages/PerritoRandom";
-import Zoo from "./pages/Zoo";
-import Contacto from "./pages/Contacto";
-import Error from "./pages/Error";
+import Inicio from "pages/Inicio";
+import Nav from "components/Nav";
+import Props from "pages/Props";
+import RickAndMorty from "pages/RickAndMorty";
+import RickAndMortyDetalle from "pages/RickAndMortyDetalle";
+import RickAndMortyEpisodio from "pages/RickAndMortyEpisodio";
+import TodoEn90Dias from "pages/TodoEn90Dias";
+import Feriados from "pages/Feriados";
+import Crypto from "pages/Crypto";
+import CryptoDetalle from "pages/CryptoDetalle";
+import Color from "pages/Color";
+import Usuario from "pages/Usuario";
+import Universidades from "pages/Universidades";
+import PerritoRandom from "pages/PerritoRandom";
+import Zoo from "pages/Zoo";
+import Contacto from "pages/Contacto";
+import Error from "pages/Error";
 
 // COMPONENTS
-import Darkmode from "./components/darkmode/Darkmode";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Darkmode from "components/darkmode/Darkmode";
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 
 // CSS
-import "./styles.css";
+import "styles.css";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);

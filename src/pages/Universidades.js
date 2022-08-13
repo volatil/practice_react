@@ -1,13 +1,13 @@
 import React , { useState } from 'react';
 import $ from "jquery";
-import HelmetResumen from '../components/Helmet/HelmetResumen';
+import HelmetResumen from 'components/Helmet/HelmetResumen';
 
-import Loading from '../components/Loading/Loading';
-import Button from "../components/Button";
+import Loading from 'components/Loading/Loading';
+import Button from "components/Button";
 
-import { traePaises } from "../helpers/functions";
+import { traePaises } from "helpers/functions";
 
-import "../assets/css/Universidades.css";
+import "assets/css/Universidades.css";
 
 function Universidades () {
 	

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 import { Link } from "react-router-dom";
-import Loading from "../components/Loading/Loading";
+import Loading from "components/Loading/Loading";
 
 // CSS
-import "../assets/css/RickAndMorty.css";
+import "assets/css/RickAndMorty.css";
 
 function RickAndMorty() {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 // IMAGENES
-import imgLoading from "../../assets/imagenes/loading.gif";
+import imgLoading from "assets/imagenes/loading.gif";
 
 import './Loading.css';
 

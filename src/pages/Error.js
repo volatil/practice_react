@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import HelmetResumen from '../components/Helmet/HelmetResumen';
+import HelmetResumen from 'components/Helmet/HelmetResumen';
 
 function Error() {
 	

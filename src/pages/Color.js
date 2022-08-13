@@ -1,6 +1,6 @@
 import React , { useEffect , useState } from "react";
-import HelmetResumen from "../components/Helmet/HelmetResumen";
-import Loading from "../components/Loading/Loading";
+import HelmetResumen from "components/Helmet/HelmetResumen";
+import Loading from "components/Loading/Loading";
 
 function ColorRandom () {
 
