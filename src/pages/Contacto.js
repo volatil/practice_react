@@ -1,6 +1,9 @@
 import React from "react";
 import HelmetResumen from "components/Helmet/HelmetResumen";
 
+// COMPONENTS
+import Icono from 'components/Icono/Icono';
+
 import imgContacto from "assets/imagenes/contacto.png"
 
 function Contacto() {
@@ -8,7 +11,10 @@ function Contacto() {
 	return (
 		<section className="contacto">
 			<HelmetResumen title="Contacto" />
-			<h2>Contacto</h2>
+			<h2>
+				<Icono nombre="contact_emergency" />
+				Contacto
+			</h2>
 			<img src={imgContacto} alt="Contacto" />;
 		</section>
 	);

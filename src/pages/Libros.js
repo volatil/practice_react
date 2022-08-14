@@ -1,12 +1,14 @@
 import React , { useEffect , useState } from "react";
 import { NavLink , useLocation } from "react-router-dom";
-import HelmetResumen from "HelmetResumen";
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
-import BuscadorLibros from 'BuscadorLibros';
-import Loading from 'Loading';
-import Button from 'Button';
+// COMPONENTS
+import Icono from 'components/Icono/Icono';
+import BuscadorLibros from 'components/Libros/BuscadorLibros';
+import Loading from 'components/Loading/Loading';
+import Button from 'components/Button';
 
-import './Libros.css';
+import 'components/Libros/Libros.css';
 
 function Libros () {
 
@@ -92,7 +94,10 @@ function Libros () {
 	if ( buscador ) {
 		return (
 			<section className="libros">
-				<h2>Libros</h2>
+				<h2>
+					<Icono nombre="menu_book" />
+					Libros
+				</h2>
 				<BuscadorLibros />
 			</section>
 		);
@@ -101,7 +106,10 @@ function Libros () {
 	return (
 		<section className="libros">
 			<HelmetResumen title={ `Libros sobre: "${elSlug}"`} />
-			<h2>Libros</h2>
+			<h2>
+				<Icono nombre="menu_book" />
+				Libros
+			</h2>
 			<div className="libros">
 				{
 					elLibro.map( ( librito ) => {

@@ -2,18 +2,18 @@ import React from "react";
 
 import "./Button.css";
 
-function Button( props ) {
+function Button( { texto = "Texto no Seteado"  , laclase = "danger" , onClick = null } = {}) {
 	return (
-		<button className={props.laclase} onClick={props.onClick}>
+		<button className={laclase} onClick={onClick}>
 			<span></span>
-			<p>{props.texto}</p>
+			<p>{texto}</p>
 		</button>
 	);
 }
 
-Button.defaultProps = {
-	texto : "Texto no Seteado" , 
-	laclase : "danger" , // primary , warning , danger , disabled
-}
+// Button.defaultProps = {
+// 	texto : "Texto no Seteado" , 
+// 	laclase : "danger" , // primary , warning , danger , disabled
+// }
 
 export default Button;

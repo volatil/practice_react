@@ -27,6 +27,9 @@ nav ul li {
 	text-transform: uppercase;
 	cursor: context-menu;
 }
+nav ul li span.material-symbols-outlined {
+	top: 0 !important;
+}
 nav ul li a:hover {
 	text-decoration: none;
 }

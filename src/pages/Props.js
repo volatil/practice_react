@@ -13,7 +13,7 @@ const Props = () => {
 	function Componentito( props ) {
 		return <h1 style={{ padding: "0 60px" , backgroundColor: "red" , color: "white" , margin: "0 auto" , textAlign: "center" , fontSize: "6em" }}>{props.texto}</h1>
 	}
-
+	
 	return(
 		<>
 		<section id="componentest">

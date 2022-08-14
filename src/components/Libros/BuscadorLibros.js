@@ -1,13 +1,11 @@
 import React from 'react';
-import Button from 'Button';
+import Button from 'components/Button';
 
 import './BuscadorLibros.css';
-import HelmetResumen from 'HelmetResumen';
+import HelmetResumen from "components/Helmet/HelmetResumen";
 
 function BuscadorLibros () {
 
-	var buscar = "";
-	
 	return (
 		<section className="BuscadorLibros">
 			<HelmetResumen title="Buscador por Libro" />
@@ -17,7 +15,7 @@ function BuscadorLibros () {
 					<label>Buscar Libro</label>
 					<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
 				</div>
-				<Button onclick={buscar} texto="BUSCAR" />
+				<Button laclase="primary" texto="BUSCAR" />
 			</div>
 		</section>
 	);

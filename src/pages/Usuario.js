@@ -81,6 +81,22 @@ function Usuario () {
 		});
 	},[]);
 	
+	const Maps = ( props ) => {
+		return(
+			<div className="gmaps">
+				<iframe 
+					src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13415.269838936052!2d${props.longitud}!3d${props.latitud}05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1660451543878!5m2!1ses-419!2scl`}
+					width="600"
+					height="450"
+					style={{ border: 0 }}
+					title="Maps"
+					>
+				</iframe>
+				
+			</div>
+		)
+	};
+	
 	if ( loading ) {
 		return (
 			<section className="usuario">
@@ -99,7 +115,7 @@ function Usuario () {
 				{
 					usuario?.map((elusuario) => {
 						return(
-							<div key={elusuario.seed}>
+							<div key={elusuario.seed} data-key={elusuario.seed}>
 								<img src={ elusuario.imagen_large } alt={ elusuario.nombre.nombre } />
 								<p>
 									<strong>{ elusuario.nombre.title }. { elusuario.nombre.nombre } { elusuario.nombre.apellido }</strong>
@@ -122,6 +138,7 @@ function Usuario () {
 									<li><strong>Cordenadas:</strong> { elusuario.direccion.cordenadas.latitud } , { elusuario.direccion.cordenadas.longitud }</li>
 									<li><strong>Zona Horaria:</strong> { elusuario.direccion.zonahoraria.gmt } { elusuario.direccion.zonahoraria.descripcion }</li>
 								</ul>
+								<Maps latitud={ elusuario.direccion.cordenadas.longitud } longitud={ elusuario.direccion.cordenadas.latitud } />
 								<p><strong>Mail:</strong> { elusuario.mail }</p>
 							</div>
 						);

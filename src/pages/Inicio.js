@@ -1,6 +1,9 @@
 import React from "react";
 import HelmetResumen from "components/Helmet/HelmetResumen";
 
+// COMPONENTS
+import Icono from 'components/Icono/Icono';
+
 function Inicio() {
 	// var imagen = "https://ouch-cdn2.icons8.com/9NZ040oJ2EFjkNQlksgUP2U0eBA1o-6Hd7lP4JI4HSU/rs:fit:608:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvOTIy/LzEwYTcyNjI1LWRm/ODMtNDk5Mi04YTdh/LTgzY2U4MGY3Nzcz/Yi5zdmc.png";
 	var imagen =
@@ -9,7 +12,10 @@ function Inicio() {
 	return (
 		<section className="inicio">
 			<HelmetResumen title="Inicio" />
-			<h2>INICIO</h2>
+			<h2>
+				<Icono nombre="mode_heat" />
+				INICIO
+			</h2>
 			<img
 				style={{ display: "block", margin: "0 auto" }}
 				src={imagen}

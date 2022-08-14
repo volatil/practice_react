@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// COMPONENTS
+import Icono from 'components/Icono/Icono';
+
 // CSS
 import "./Nav.css";
 
@@ -20,15 +23,16 @@ function Nav() {
 				<Li nombre="Inicio" link="/" />
 				<li>
 					ComponenTEST 
-					<span className="material-symbols-outlined">keyboard_arrow_down</span>
+					<Icono nombre="keyboard_arrow_down" />
 					<ul>
 						<Li nombre="Props" link="/props" />
 					</ul>
 				</li>
 				<li>
 					Fetch 
-					<span className="material-symbols-outlined">keyboard_arrow_down</span>
+					<Icono nombre="keyboard_arrow_down" />
 					<ul>
+						<Li nombre="Libros" link="/libros" />
 						<Li nombre="Rick and Morty" link="/rickandmorty" />
 						<Li nombre="Todo en 90 Dias" link="/todoen90dias" />
 						<Li nombre="Feriados" link="/feriados" />

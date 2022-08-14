@@ -1,12 +1,11 @@
 
 import { Fragment } from "react";
-// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Inicio from "pages/Inicio";
-import Nav from "components/Nav";
 import Props from "pages/Props";
+import Libros from "pages/Libros";
 import RickAndMorty from "pages/RickAndMorty";
 import RickAndMortyDetalle from "pages/RickAndMortyDetalle";
 import RickAndMortyEpisodio from "pages/RickAndMortyEpisodio";
@@ -23,6 +22,7 @@ import Contacto from "pages/Contacto";
 import Error from "pages/Error";
 
 // COMPONENTS
+import Nav from "components/Nav";
 import Darkmode from "components/darkmode/Darkmode";
 import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
@@ -42,7 +42,10 @@ root.render(
 			<Nav />
 			<Routes>
 				<Route path="/" element={<Inicio />} />
+				
 				<Route path="/props" element={<Props />} />
+				
+				<Route path="/libros" element={<Libros />} />
 				<Route path="/rickandmorty" element={<RickAndMorty />} />
 				<Route path="/rickandmorty/personaje/:id" element={<RickAndMortyDetalle />} />
 				<Route path="/rickandmorty/episodio/:id" element={<RickAndMortyEpisodio />} />
@@ -56,6 +59,7 @@ root.render(
 				<Route path="/perritorandom" element={<PerritoRandom />} />
 				<Route path="/zoo" element={<Zoo />} />
 				<Route path="/contacto" element={<Contacto />} />
+				
 				<Route path="*" element={<Error />} />
 			</Routes>
 			
