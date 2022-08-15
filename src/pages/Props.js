@@ -2,6 +2,9 @@ import React , { useState } from 'react';
 import Button from "components/Button";
 import $ from "jquery";
 
+// COMPONENTS
+import Icono from 'components/Icono/Icono';
+
 const Props = () => {
 	const [cambioTexto, setCambioTexto] = useState(null);
 	
@@ -17,6 +20,10 @@ const Props = () => {
 	return(
 		<>
 		<section id="componentest">
+			<h2>
+				<Icono nombre="bug_report" />
+				PROPS
+			</h2>
 			<style type="text/css">{`
 				.red {
 					color: red

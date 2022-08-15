@@ -1,23 +1,18 @@
-import React from 'react';
 import Button from 'components/Button';
 
-import './BuscadorLibros.css';
-import HelmetResumen from "components/Helmet/HelmetResumen";
+// FUNCTIONS
+import { traeLibro } from "components/Libros/Functions";
 
 function BuscadorLibros () {
 
 	return (
-		<section className="BuscadorLibros">
-			<HelmetResumen title="Buscador por Libro" />
-			<h2>Buscador Libros</h2>
+		<div className="buscador">
 			<div>
-				<div>
-					<label>Buscar Libro</label>
-					<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
-				</div>
-				<Button laclase="primary" texto="BUSCAR" />
+				<label>Buscar Libro</label>
+				<input className="input_buscar" type="text" placeholder="Baldor? Porota? Papelucho?" />
 			</div>
-		</section>
+			<Button onClick={traeLibro} laclase="primary" texto="BUSCAR" />
+		</div>
 	);
 };
 

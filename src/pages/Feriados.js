@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // COMPONENTS
 import Button from "components/Button";
 import HelmetResumen from "components/Helmet/HelmetResumen";
+import Icono from "components/Icono/Icono";
 
 // CSS
 import "assets/css/Feriados.css";
@@ -62,7 +63,10 @@ function Feriados() {
 		
 		return (
 			<section id="feriados">
-			<h2>FERIADOS</h2>
+			<h2>
+				<Icono nombre="calendar_month" />
+				FERIADOS
+			</h2>
 			<HelmetResumen title="Feriados Chile" />
 			<Buscador />
 			<div className="feriados">

@@ -1,25 +1,31 @@
-section.BuscadorLibros {}
-section.BuscadorLibros > div {
+div.buscador {
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	margin: 40px auto 0;
 }
-section.BuscadorLibros > div > div {
+div.buscador > div {
 	position: relative;
 	margin-bottom: 10px;
+	width: 100%;
 }
-section.BuscadorLibros > div > div > label {
-    position: absolute;
-    top: -12px;
-    left: 10px;
-    background: white;
-    padding: 4px 8px;
-    font-size: 0.8em;
+div.buscador > div > label {
+	position: absolute;
+	top: -12px;
+	left: 10px;
+	background: white;
+	padding: 4px 8px;
+	font-size: 0.8em;
 }
-section.BuscadorLibros > div > div > input {
-    width: 300px;
-    height: 40px;
-    padding: 6px 10px;
-    border: 1px solid #ddd;
+div.buscador > div > input {
+	width: 300px;
+	width: 100%;
+	height: 40px;
+	padding: 6px 10px;
+	border: 1px solid #ddd;
+}
+div.buscador > button {
+	width: 100%;
 }
