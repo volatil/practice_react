@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // COMPONENTS
 import HelmetResumen from "components/Helmet/HelmetResumen";
 import Loading from "components/Loading/Loading";
+import Icono from "components/Icono/Icono";
 
 // CSS
 import "assets/css/Crypto.css";
@@ -50,8 +51,12 @@ function Crypto() {
 	
 	if ( loading ) {
 		return (
-			<section className="usuario">
+			<section id="todaslascrypto">
 				<HelmetResumen title="Cryptos" />
+				<h2>
+					<Icono nombre="account_balance_wallet" />
+					{`{Cryptos}`}
+				</h2>
 				<Loading />
 			</section>
 		);
@@ -60,7 +65,10 @@ function Crypto() {
 	return (
 		<section id="todaslascrypto">
 		<HelmetResumen title="Cryptos" />
-		<h2>{`{Cryptos}`}</h2>
+		<h2>
+			<Icono nombre="account_balance_wallet" />
+			{`{Cryptos}`}
+		</h2>
 		<div className="cryptos">
 			{todasLasCryptos?.map((crypto) => {
 				return (

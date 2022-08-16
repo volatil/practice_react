@@ -5,6 +5,7 @@ import Loading from 'components/Loading/Loading';
 import { traeZoo } from "helpers/functions";
 
 import 'assets/css/Zoo.css';
+import Icono from 'components/Icono/Icono';
 
 function Zoo () {
 	
@@ -18,16 +19,6 @@ function Zoo () {
 		setLoading( false );
 		
 	},[]);
-	
-	if ( loading ) {
-		return (
-			<section className="zoo">
-				<HelmetResumen title="Cargando Animalitos ..." />
-				<h2>Zoo</h2>
-				<Loading />
-			</section>
-		);
-	};
 		
 	function Animalitos(params) {
 		return (
@@ -58,11 +49,27 @@ function Zoo () {
 			</div>
 		)
 	}
+	
+	if ( loading ) {
+		return (
+			<section className="zoo">
+				<HelmetResumen title="Cargando Animalitos ..." />
+				<h2>
+					<Icono nombre="cruelty_free" />
+					Zoo
+				</h2>
+				<Loading />
+			</section>
+		);
+	};
 				
 	return (
 		<section className="zoo">
 			<HelmetResumen title="Animalitos" />
-			<h2>Zoo</h2>
+			<h2>
+				<Icono nombre="cruelty_free" />
+				Zoo
+			</h2>
 			<Animalitos />
 		</section>
 	);

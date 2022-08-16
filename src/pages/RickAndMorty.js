@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import HelmetResumen from "components/Helmet/HelmetResumen";
 import { Link } from "react-router-dom";
+
+// COMPONENTS
+import Icono from "components/Icono/Icono";
 import Loading from "components/Loading/Loading";
 
 // CSS
@@ -40,7 +43,10 @@ function RickAndMorty() {
 		return (
 			<section className="personajes">
 				<HelmetResumen title="Cargando ..." />
-				<h2>Rick and Morty</h2>
+				<h2>
+					<Icono nombre="live_tv" />
+					Rick and Morty
+				</h2>
 				<Loading />
 			</section>
 		);
@@ -49,7 +55,10 @@ function RickAndMorty() {
 	return (
 		<section id="personajes">
 			<HelmetResumen title="Rick and Morty" />
-			<h2>Rick and Morty</h2>
+			<h2>
+				<Icono nombre="live_tv" />
+				Rick and Morty
+			</h2>
 				<div className="personajes">
 					{todosLosPersonajes?.map((prs) => {
 						return (

@@ -8,6 +8,7 @@ import Button from "components/Button";
 import { traePaises } from "helpers/functions";
 
 import "assets/css/Universidades.css";
+import Icono from 'components/Icono/Icono';
 
 function Universidades () {
 	
@@ -63,7 +64,10 @@ function Universidades () {
 		return (
 			<section id="lasuniversidades">
 				<HelmetResumen title="Cargando Universidades ..." />
-				<h2>Universidades</h2>
+				<h2>
+					<Icono nombre="school" />
+					Universidades
+				</h2>
 				<Buscador />
 				<Loading />
 			</section>
@@ -73,7 +77,10 @@ function Universidades () {
 	return ( 
 		<section id="lasuniversidades">
 			<HelmetResumen title="Universidades" />
-			<h2>Universidades</h2>
+			<h2>
+				<Icono nombre="school" />
+				Universidades
+			</h2>
 			<Buscador />
 			<Universidades />
 		</section>

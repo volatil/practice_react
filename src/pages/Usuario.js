@@ -1,6 +1,9 @@
 import React , { useEffect , useState } from 'react';
+
+// COMPONENTS
 import HelmetResumen from 'components/Helmet/HelmetResumen';
 import Loading from 'components/Loading/Loading';
+import Icono from 'components/Icono/Icono';
 
 import 'assets/css/Usuario.css';
 
@@ -101,7 +104,10 @@ function Usuario () {
 		return (
 			<section className="usuario">
 				<HelmetResumen title="Cargando Usuario ..." />
-				<h2>Usuario</h2>
+				<h2>
+					<Icono nombre="account_circle" />
+					Usuario
+				</h2>
 				<Loading />
 			</section>
 		);
@@ -110,7 +116,10 @@ function Usuario () {
 	return ( 
 		<section className="usuario">
 			<HelmetResumen title={`Usuario: ${fijatitle}`} />
-			<h2>Usuario</h2>
+			<h2>
+				<Icono nombre="account_circle" />
+				Usuario
+			</h2>
 			<div className="elusuario">
 				{
 					usuario?.map((elusuario) => {

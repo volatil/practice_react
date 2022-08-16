@@ -1,6 +1,7 @@
 import React , { useEffect , useState } from "react";
 import HelmetResumen from "components/Helmet/HelmetResumen";
 import Loading from "components/Loading/Loading";
+import Icono from "components/Icono/Icono";
 
 function ColorRandom () {
 
@@ -23,9 +24,12 @@ function ColorRandom () {
 	
 	if ( loading ) {
 		return (
-			<section className="usuario">
+			<section className="test">
 				<HelmetResumen title="Cargando Color ..." />
-				<h2>Color Random</h2>
+				<h2>
+					<Icono nombre="palette" />
+					Color Random
+				</h2>
 				<Loading />
 			</section>
 		);
@@ -34,7 +38,10 @@ function ColorRandom () {
 	return (
 		<section className="test">
 			<HelmetResumen title={`Color ${elcolor}`} />
-			<h2>Color Random</h2>
+			<h2>
+				<Icono nombre="palette" />
+				Color Random
+			</h2>
 			<div style={{ background: elcolor , width: '100%' , height: '550px' , margin: '0 auto' }}></div>
 		</section>
 	);

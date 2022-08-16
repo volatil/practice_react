@@ -7,7 +7,7 @@ import HelmetResumen from "components/Helmet/HelmetResumen";
 import Loading from "components/Loading/Loading";
 
 // CSS
-import "assets/css/CryptoDetalle.css";
+import "../assets/css/CryptoDetalle.css";
 
 // DOCUMENTACION
 // https://www.coingecko.com/es/api/documentation
@@ -52,17 +52,19 @@ function CryptoDetalle() {
 					}
 				},
 				status: function() {
-					let status = "AAAAAAAAAAAAaaaaa";
+					let status = "";
 					let precio_actual = detalle.precio.actual();
 					let precio_anterior = detalle.precio.anterior();
 					if (precio_anterior === precio_actual) {
-						status = "ESTA IGUAL";
+						// status = "ESTA IGUAL";
+						status = <div className="status mantiene"><span className="material-symbols-outlined"> equalizer </span><p>Se mantiene</p></div>;
 					} else if (precio_anterior > precio_actual) {
-						status = "Bajo el precio uwu";
+						// status = "Bajo el precio uwu";
+						status = <div className="status bajo"><span className="material-symbols-outlined"> expand_more </span><p>Bajo</p></div>;
 					} else {
-						status = "Subio :D";
+						// status = "Subio :D";
+						status = <div className="status subio"><span className="material-symbols-outlined"> expand_less </span><p>Subio</p></div>;
 					}
-					
 					return status;
 				},
 			};
@@ -94,7 +96,7 @@ function CryptoDetalle() {
 	if ( loading ) {
 		return (
 			<section className="usuario">
-				<HelmetResumen title="Cargando Color ..." />
+				<HelmetResumen title="Cargando Crypto ..." />
 				<Loading />
 			</section>
 		);
@@ -102,13 +104,13 @@ function CryptoDetalle() {
 	
 	return (
 		<section id="cryptodetalle">
-			<HelmetResumen title={`Crypto / ${cryptoState?.map((asdasdasd) => {return asdasdasd.nombre})}`} />
+			<HelmetResumen title={`Crypto => ${cryptoState?.map((asdasdasd) => {return asdasdasd.nombre})}`} />
 			{cryptoState?.map((cryp) => {
 				return (
 					<div className="detalle" key={cryp.ranking}>
 						<h1>
-							<strong>{cryp.nombre} ({cryp.abreviatura.toUpperCase()})</strong>
-							<span className="status">Status: {cryp.status}</span>
+							<span>{cryp.nombre} ({cryp.abreviatura.toUpperCase()})</span>
+							{cryp.status}
 						</h1>
 						<p className="ranking">Rank: <strong>#{cryp.ranking}</strong></p>
 						<div className="imagen">

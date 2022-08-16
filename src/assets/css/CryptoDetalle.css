@@ -7,8 +7,53 @@ section#cryptodetalle .detalle p.ranking {
   border-radius: 4px;
 }
 section#cryptodetalle button {
-  margin: 30px auto 0;
+	margin: 30px auto 0;
 }
-section#cryptodetalle .detalle .imagen img {
-  /*width: 300px;*/
+section#cryptodetalle .detalle h1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+section#cryptodetalle .detalle h1 .status {
+	padding: 6px 14px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+section#cryptodetalle .detalle h1 .status > p {
+	font-size: 0.4em;
+	font-weight: 400;
+	margin: 0;
+	padding-left: 5px;
+}
+section#cryptodetalle .detalle h1 .subio {
+	background: #d1e7dd;
+	border: 1px solid #badbcc;
+}
+section#cryptodetalle .detalle h1 .subio > p ,
+section#cryptodetalle .detalle h1 .subio > span {
+	color: #0f5132;
+}
+section#cryptodetalle .detalle h1 .mantiene {
+	background: #e2e3e5;
+	border: 1px solid #d3d6d8;
+}
+section#cryptodetalle .detalle h1 .mantiene > p ,
+section#cryptodetalle .detalle h1 .mantiene > span {
+	color: #41464b;
+}
+section#cryptodetalle .detalle h1 .bajo {
+	background: #f8d7da;
+	border: 1px solid #f5c2c7;
+}
+section#cryptodetalle .detalle h1 .bajo > p ,
+section#cryptodetalle .detalle h1 .bajo > span {
+	color: #842029;
 }

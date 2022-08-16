@@ -1,6 +1,9 @@
 import React , {useEffect , useState} from 'react';
+
+// COMPONENTS
 import HelmetResumen from 'components/Helmet/HelmetResumen';
 import Loading from 'components/Loading/Loading';
+import Icono from 'components/Icono/Icono';
 
 import 'assets/css/PerritoRandom.css';
 
@@ -37,7 +40,10 @@ function FetchChow () {
 		return (
 			<section className="perritoRandom">
 				<HelmetResumen title="Cargando Perrito ..." />
-				<h2>Perrito Random</h2>
+				<h2>
+					<Icono nombre="pets" />
+					Perrito Random
+				</h2>
 				<Loading />
 			</section>
 		);
@@ -46,7 +52,10 @@ function FetchChow () {
 	return ( 
 		<section className="perritoRandom">
 			<HelmetResumen title={ `Perrito Raza: ${ raza }` } />
-			<h2>Perrito Random</h2>
+			<h2>
+				<Icono nombre="pets" />
+				Perrito Random
+			</h2>
 			<div>
 				<img src={imagen} alt="GUAU!" />
 				<p>{raza}</p>
