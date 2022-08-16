@@ -5,6 +5,7 @@ PENDIENTE:
 
 *   Enlazar libros.js
 *   Buscar de libros
+*   Menu Mobile
 *   Darkmode
 *   Ordenar estructura de carpetas
 *   Trabajarlo con BD
