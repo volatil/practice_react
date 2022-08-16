@@ -1,4 +1,4 @@
-import React , { useState } from "react";
+import React , { useEffect , useState } from "react";
 import axios from "axios";
 // import { NavLink , useLocation } from "react-router-dom";
 import $ from "jquery";
@@ -13,6 +13,19 @@ function Libros () {
 
 	const [ resultado , setResultado ] = useState();
 	
+	useEffect(() => {
+		const listener = event => {
+			if (event.code === "Enter" || event.code === "NumpadEnter") {
+				event.preventDefault();
+				$( "div.buscador > button" ).click()
+			}
+		};
+		document.addEventListener("keydown", listener);
+		return () => {
+			document.removeEventListener("keydown", listener);
+		};
+	}, []);
+	
 	function BuscadorLibros () {
 	
 		const traeLibro = async() => {
@@ -24,8 +37,7 @@ function Libros () {
 				var peticion = await axios.get( `https://www.googleapis.com/books/v1/volumes?q=${loBuscado}` )
 				setResultado( peticion.data.items )
 			};
-			
-		}
+		};
 		
 		return (
 			<div className="buscador">
@@ -45,7 +57,6 @@ function Libros () {
 				{
 					resultado != null ? <h3>Resultados:</h3> : ""
 				}
-				
 				<div className="resultados">
 				{
 					resultado != null ?
