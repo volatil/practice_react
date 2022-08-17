@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 
 // COMPONENTS
-// import ClimaEspecifico from "screens/clima/ClimaEspecifico";
 import Icono from "components/Icono/Icono";
 import { useState } from "react";
+
+import { traducir } from "helpers/traducir";
+
+// https://api.publicapis.org/entries
 
 function Clima() {
 
@@ -20,15 +23,7 @@ function Clima() {
 					"actual" : {
 						"diahora" : function(){
 							let diahora = clima.currentConditions.dayhour;
-							diahora = diahora.replaceAll()
-							diahora = diahora.replaceAll( "Monday" , "Lunes" );
-							diahora = diahora.replaceAll( "Tuesday" , "Martes" );
-							diahora = diahora.replaceAll( "Wednesday" , "Miercoles" );
-							diahora = diahora.replaceAll( "Thursday" , "Jueves" );
-							diahora = diahora.replaceAll( "Friday" , "Viernes" );
-							diahora = diahora.replaceAll( "Saturday" , "Sabado" );
-							diahora = diahora.replaceAll( "Sunday" , "Domingo" );
-							return diahora;
+							return traducir(diahora)
 						} ,
 						"temp" : {
 							"c" : function(){
@@ -40,6 +35,10 @@ function Clima() {
 							let imagen = clima.currentConditions.iconURL;
 							return imagen;
 						} ,
+						"pronostico" : function() {
+							let pronostico = clima.currentConditions.comment;
+							return traducir(pronostico);
+						} ,
 					}
 				};
 				var todo = [];
@@ -48,6 +47,7 @@ function Clima() {
 					"actual_diahora" : objClima.actual.diahora() ,
 					"actual_c" : objClima.actual.temp.c() ,
 					"actual_imagen" : objClima.actual.imagen() ,
+					"actual_pronostico" : objClima.actual.pronostico() ,
 				});
 				setClima( todo )
 			})
@@ -62,7 +62,8 @@ function Clima() {
 						return (
 							<div className="clima" key={cli.locacion}>
 								<h4>{cli.locacion}</h4>
-								<img src={cli.actual_imagen} alt={cli.locacion} />
+								<img style={{ width: "180px" }} src={cli.actual_imagen} alt={cli.locacion} />
+								<p>{cli.actual_pronostico}</p>
 								<p>{cli.actual_diahora}</p>
 								<p>{cli.actual_c}°C</p>
 							</div>
