@@ -17,11 +17,11 @@ import Button from "components/Button";
 
 function Clima() {
 
-	const [ clima , setClima ] = useState();
+	const [ clima , setClima ] = useState("");
 
 	const traeClima = async ( locacion ) => {
 		const peticion = await axios.get( `https://weatherdbi.herokuapp.com/data/weather/${ locacion }` );
-		// console.log( peticion );
+		console.log( peticion );
 		// console.log( peticion.data.region );
 		setClima( peticion.data )
 	}
@@ -34,8 +34,8 @@ function Clima() {
 		}
 		return(
 			<div className="buscador">
-				<input style={{ width: "270px" , padding: "5px" , height: "40px" , marginBottom: "10px" }} type="text" placeholder="Ingresa tu ciudad" />
-				<Button onClick={elQueBusca} laclase="primary" texto="Buscar ciudad" />
+				<input style={{ width: "270px" , padding: "5px" , height: "40px" , marginBottom: "10px" }} type="text" placeholder="Ingresa tu ciudad" defaultValue={clima.region} />
+				<Button onClick={elQueBusca} laclase="primary" texto="Buscar" />
 			</div>
 		)
 	}
