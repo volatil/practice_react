@@ -1,0 +1,14 @@
+section#clima {}
+section#clima > .clima {}
+section#clima > .clima > img {
+	margin: 0 auto;
+	display: block;
+	width: 180px;
+}
+section#clima > .clima ul {
+	margin: 0;
+	padding: 0;
+}
+section#clima > .clima ul li {
+	list-style: none;
+}

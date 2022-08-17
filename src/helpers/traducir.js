@@ -1,7 +1,5 @@
 function traducir( palabra ) {
 	
-	console.log( `Voy a traducir: ${palabra}` );
-	
 	palabra = palabra.replaceAll( "Light rain showers" , "Lluvias ligeras" );
 	palabra = palabra.replaceAll( "Partly cloudy" , "Parcialmente nublado" );
 	palabra = palabra.replaceAll( "Mostly sunny" , "Mayormente soleado" );
