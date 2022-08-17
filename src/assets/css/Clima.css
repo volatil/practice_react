@@ -1,14 +1,26 @@
 section#clima {}
-section#clima > .clima {}
-section#clima > .clima > img {
+.clima {
+	margin-top: 80px;
+}
+.clima > img {
 	margin: 0 auto;
 	display: block;
 	width: 180px;
 }
-section#clima > .clima ul {
+.clima ul {
 	margin: 0;
 	padding: 0;
 }
-section#clima > .clima ul li {
+.clima ul li {
 	list-style: none;
+}
+.restosdedias {
+	display: flex;
+	flex-wrap: wrap;
+}
+.clima.restosdedias[data-key="0"] {
+	display: none;
+}
+.clima.restosdedias {
+	width: 30%;
 }
