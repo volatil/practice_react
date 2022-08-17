@@ -32,6 +32,7 @@ function Nav() {
 					Fetch 
 					<Icono nombre="keyboard_arrow_down" />
 					<ul>
+						<Li nombre="Clima" link="/clima" />
 						<Li nombre="Libros" link="/libros" />
 						<Li nombre="Rick and Morty" link="/rickandmorty" />
 						<Li nombre="Todo en 90 Dias" link="/todoen90dias" />

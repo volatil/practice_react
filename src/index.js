@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Inicio from "pages/Inicio";
 import Props from "pages/Props";
+import Clima from "pages/Clima";
 import Libros from "pages/Libros";
 import RickAndMorty from "pages/RickAndMorty";
 import RickAndMortyDetalle from "pages/RickAndMortyDetalle";
@@ -45,6 +46,7 @@ root.render(
 				
 				<Route path="/props" element={<Props />} />
 				
+				<Route path="/clima" element={<Clima />} />
 				<Route path="/libros" element={<Libros />} />
 				<Route path="/rickandmorty" element={<RickAndMorty />} />
 				<Route path="/rickandmorty/personaje/:id" element={<RickAndMortyDetalle />} />
