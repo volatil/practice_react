@@ -46,7 +46,6 @@ function Clima() {
 	}
 	
 	function ClimaEspecifico() {
-		
 		return (
 			<>
 		
@@ -91,20 +90,9 @@ function Clima() {
 		)
 	}
 	
-	var regionTitle = ""
 	if ( clima ){
-		regionTitle = clima.region;
+		var regionTitle = clima.region;
 	}
-
-	{/*
-	if ( loading ) {
-		return (
-			<section id="clima">
-				<Loading />
-			</section>
-		);
-	};
-	*/}
 	
 	return (
 		<section id="clima">
