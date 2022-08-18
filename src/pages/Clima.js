@@ -4,6 +4,7 @@ import $ from "jquery";
 import HelmetResumen from "components/Helmet/HelmetResumen";
 
 // COMPONENTS
+import Loading from "components/Loading/Loading";
 import Icono from "components/Icono/Icono";
 import { useState } from "react";
 
@@ -19,15 +20,18 @@ import Button from "components/Button";
 function Clima() {
 
 	const [ clima , setClima ] = useState("");
+	const [ loading , setLoading ] = useState(false);
 
 	const traeClima = async ( locacion ) => {
 		const peticion = await axios.get( `https://weatherdbi.herokuapp.com/data/weather/${ locacion }` );
 		console.log( peticion );
 		setClima( peticion.data )
+		setLoading( false );
 	}
 	
 	function Buscador() {
 		function elQueBusca() {
+			setLoading( true );
 			var loquevoyabuscar = $( ".buscador > input" ).val();
 			console.log( `Buscando: ${ loquevoyabuscar }` );
 			traeClima( loquevoyabuscar )
@@ -36,6 +40,7 @@ function Clima() {
 			<div className="buscador">
 				<input style={{ width: "270px" , padding: "5px" , height: "40px" , marginBottom: "10px" }} type="text" placeholder="Ingresa tu ciudad" defaultValue={clima.region} />
 				<Button onClick={elQueBusca} laclase="primary" texto="Buscar" />
+				
 			</div>
 		)
 	}
@@ -71,7 +76,7 @@ function Clima() {
 				{
 					clima.next_days?.map((nexts , i) => {
 						return (
-								<div className="clima restosdedias" data-key={i}>
+							<div className="clima restosdedias" key={i}>
 								<h2>{traducir( nexts.day )}</h2>
 								<img src={nexts.iconURL} alt={clima.day} />
 								<ul>
@@ -90,6 +95,16 @@ function Clima() {
 	if ( clima ){
 		regionTitle = clima.region;
 	}
+
+	{/*
+	if ( loading ) {
+		return (
+			<section id="clima">
+				<Loading />
+			</section>
+		);
+	};
+	*/}
 	
 	return (
 		<section id="clima">
@@ -99,6 +114,7 @@ function Clima() {
 				Clima
 			</h2>
 			<Buscador />
+			{ loading ? <Loading /> : null }
 			<ClimaEspecifico />
 			<ClimaRestosDias />
 		</section>
