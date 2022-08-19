@@ -9,7 +9,7 @@ import Icono from "components/Icono/Icono";
 import { useState } from "react";
 
 // FUNCTIONS
-import { traducir } from "helpers/traducir";
+import { traducir ,cambioImagenClima } from "helpers/traducir";
 
 // CSS
 import "../assets/css/Clima.css"
@@ -52,14 +52,15 @@ function Clima() {
 				{
 					clima ? 
 						<div className="clima" key={clima.region}>
+							<h1>HOY</h1>
 							<h3>{clima.region}</h3>
-							<img src={clima.currentConditions.iconURL} alt={clima.region} />
+							<img src={cambioImagenClima(clima.currentConditions.iconURL)} alt={clima.region} />
 							<h4>{clima.currentConditions.temp.c}°C</h4>
 							<ul>
-								<li>{traducir( clima.currentConditions.comment )}</li>
+								<li><strong>{traducir( clima.currentConditions.comment )}</strong></li>
 								<li>{traducir( clima.currentConditions.dayhour )}</li>
-								<li>Humedad: {clima.currentConditions.humidity}</li>
-								<li>Precipitaciones: {clima.currentConditions.precip}</li>
+								<li><strong>Humedad: </strong>{clima.currentConditions.humidity}</li>
+								<li><strong>Precipitaciones: </strong>{clima.currentConditions.precip}</li>
 							</ul>
 						</div>
 					:
@@ -69,18 +70,19 @@ function Clima() {
 		)
 	};
 	
-	function ClimaRestosDias() {
+	const ClimaRestosDias = function (  ) {
+	
 		return (
-			<div className="restosdedias">
+			<div className="climas">
 				{
 					clima.next_days?.map((nexts , i) => {
 						return (
-							<div className="clima restosdedias" key={i}>
+							<div className="climafuturo" data-key={i} key={i}>
 								<h2>{traducir( nexts.day )}</h2>
-								<img src={nexts.iconURL} alt={clima.day} />
+								<img src={ cambioImagenClima( nexts.iconURL ) } alt={clima.day} />
 								<ul>
 									<li>{traducir( nexts.comment )}</li>
-									<li>Max: {nexts.max_temp.c}° / Min: {nexts.min_temp.c}°</li>
+									<li><strong>Max: </strong>{nexts.max_temp.c}° / <strong>Min: </strong>{nexts.min_temp.c}°</li>
 								</ul>
 							</div>
 						)
@@ -88,7 +90,8 @@ function Clima() {
 				}
 			</div>
 		)
-	}
+		
+	};
 	
 	if ( clima ){
 		var regionTitle = clima.region;

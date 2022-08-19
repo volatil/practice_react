@@ -1,11 +1,15 @@
 section#clima {}
 .clima {
-	margin-top: 80px;
+	width: 35%;
+	/* margin-top: 80px; */
+	margin: 3% auto 2%;
+	border: 1px solid #ddd;
+	padding: 1% 2%;
 }
 .clima > img {
 	margin: 0 auto;
 	display: block;
-	width: 180px;
+	width: 260px;
 }
 .clima ul {
 	margin: 0;
@@ -14,13 +18,35 @@ section#clima {}
 .clima ul li {
 	list-style: none;
 }
-.restosdedias {
+.climas {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
 }
-.clima.restosdedias[data-key="0"] {
+.climafuturo[data-key="0"] {
 	display: none;
 }
-.clima.restosdedias {
-	width: 30%;
+.climafuturo {
+	width: 23%;
+	margin: 3% 1% 2%;
+	border: 1px solid #ddd;
+	padding: 1% 2%;
+}
+.climafuturo > h2 {
+	font-size: 3em;
+	margin: 0 0 40px 0;
+}
+.climafuturo > img {
+	width: 100%;
+}
+.climafuturo > ul {
+	margin: 40px 0;
+	padding: 0;
+}
+.climafuturo > ul > li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.4em;
 }

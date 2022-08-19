@@ -36,6 +36,7 @@ const root = createRoot(rootElement);
 
 root.render(
 	<Fragment>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
 		<Darkmode />
 		<Router>
