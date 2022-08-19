@@ -3,7 +3,8 @@ const cambioImagenClima = function ( imagen ) {
 	if ( imagen.includes( "48" ) ) {
 		imagen = imagen.replaceAll( "48" , "64" );
 	}
-
+	
+	// https://www.flaticon.com/packs/weather-161
 	imagen = imagen.replaceAll( "https://ssl.gstatic.com/onebox/weather/64/sunny.png" , "https://cdn-icons-png.flaticon.com/512/869/869869.png" );
 	imagen = imagen.replaceAll( "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" , "https://cdn-icons-png.flaticon.com/512/1146/1146869.png" );
 	imagen = imagen.replaceAll( "https://ssl.gstatic.com/onebox/weather/64/cloudy.png" , "https://cdn-icons-png.flaticon.com/512/1163/1163624.png" );
@@ -16,7 +17,7 @@ const cambioImagenClima = function ( imagen ) {
 	
 };
 
-function traducir( palabra ) {
+const traducir = function ( palabra ) {
 	
 	// CLIMA.js
 	palabra = palabra.replaceAll( "Light rain showers" , "Lluvias ligeras" );
