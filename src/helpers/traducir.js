@@ -26,6 +26,7 @@ const traducir = function ( palabra ) {
 	palabra = palabra.replaceAll( "Mostly cloudy" , "Mayormente nuboso" );
 	palabra = palabra.replaceAll( "Rain and snow" , "Lluvia y nieve" );
 	palabra = palabra.replaceAll( "Patches of fog" , "Parches de niebla" );
+	palabra = palabra.replaceAll( "Clear with periodic clouds" , "Despejado con nubes periódicas" );
 	palabra = palabra.replaceAll( "Thunderstorm" , "Tormenta" );
 	palabra = palabra.replaceAll( "Haze" , "Bruma" );
 	palabra = palabra.replaceAll( "Sunny" , "Soleado" );
