@@ -16,6 +16,7 @@ import Crypto from "pages/Crypto";
 import CryptoDetalle from "pages/CryptoDetalle";
 import Color from "pages/Color";
 import Usuario from "pages/Usuario";
+import Usuarios from "pages/Usuarios";
 import Universidades from "pages/Universidades";
 import PerritoRandom from "pages/PerritoRandom";
 import Zoo from "pages/Zoo";
@@ -58,6 +59,7 @@ root.render(
 				<Route path="/crypto/:id" element={<CryptoDetalle />} />
 				<Route path="/color" element={<Color />} />
 				<Route path="/usuario" element={<Usuario />} />
+				<Route path="/usuarios" element={<Usuarios />} />
 				<Route path="/universidades" element={<Universidades />} />
 				<Route path="/perritorandom" element={<PerritoRandom />} />
 				<Route path="/zoo" element={<Zoo />} />

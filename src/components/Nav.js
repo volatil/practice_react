@@ -41,6 +41,7 @@ function Nav() {
 						<Li nombre="Crypto" link="/crypto" arrow="si" />
 						<Li nombre="Color" link="/color" arrow="si" />
 						<Li nombre="Usuario" link="/usuario" arrow="si" />
+						<Li nombre="Usuarios" link="/usuarios" arrow="si" />
 						<Li nombre="Universidades" link="/universidades" arrow="si" />
 						<Li nombre="Perrito Random" link="/perritorandom" arrow="si" />
 						<Li nombre="Zoo" link="/zoo" arrow="si" />
